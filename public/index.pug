@@ -1,0 +1,38 @@
+extends ../layout/main
+block variables
+    -var pageTitle= 'Забронировать номер'
+
+block content
+    
+    .wrapper
+        div.find Найдём номера под ваши пожелания  
+            div.find-arrival Прибытие<br>
+                input(
+                    type="text"
+                    name="date"
+                    id="startdate"
+                    readonly = "true"
+                    placeholder = "ДД.ММ.ГГГГ"
+                    )
+                button#butt d
+            div.find-departure Выезд <br>
+                input(
+                    type="text"
+                    name="date"
+                    id="enddate"
+                    readonly = "true"
+                    placeholder = "ДД.ММ.ГГГГ"
+                    )
+                button#butt2 jj
+
+        .sub Лучшие номера для вашей работы, <br>отдыха и просто вдохновения
+                
+            
+        
+
+
+
+
+
+                
+        
