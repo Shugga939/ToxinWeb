@@ -1,0 +1,219 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: rgba(31, 33, 65, 0.502);
+}
+
+.logo {
+  width: 106px;
+  height: 40px;
+  padding-left: 140px;
+  align-items: center;
+}
+
+.header {
+  background-color: white;
+  display: flex;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  height: 70px;
+  max-width: 100;
+  align-items: center;
+  max-width: 1440px;
+  min-width: 1440px;
+  margin: 0px auto;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+  height: 18px;
+  margin-left: 284px;
+}
+.nav-list {
+  margin-right: 20px;
+  margin-left: 0;
+  cursor: default;
+}
+.nav-item {
+  text-decoration: none;
+  color: rgba(31, 33, 65, 0.502);
+}
+
+.pinkB {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  color: white;
+  height: 34px;
+  width: 196px;
+  border-radius: 22px;
+  border-style: none;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+
+.framePink {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  height: 34px;
+  width: 87px;
+  border: 2px;
+  border-radius: 22px;
+  margin-right: 20px;
+}
+
+.whiteB {
+  background-color: white;
+  color: #bc9cff;
+  font-size: 12px;
+  font-weight: 700;
+  border: none;
+  border-radius: 22px;
+  height: 30px;
+  width: 83px;
+  margin: 2px 2px;
+  cursor: pointer;
+  outline: none;
+}
+
+.drop {
+  position: absolute;
+  background: rgba(188, 156, 255, 0.02);
+  padding-left: 0px;
+  padding-top: 10px;
+  background-color: white;
+}
+.drop-link {
+  margin-top: 10px;
+  display: none;
+  padding-top: 15px;
+}
+
+li.nav-list:hover li.drop-link {
+  display: block;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.down {
+  background-image: url(/dropd.a68cdfe8.svg);
+  background-repeat: no-repeat;
+  width: 70px;
+  background-position: right;
+}
+
+.wrapper {
+  background-image: url(/mainBG.b3cc9af1.jpg);
+  max-width: 1440px;
+  min-width: 1440px;
+  height: 900px;
+  background-repeat: no-repeat;
+  margin: 0px auto;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+}
+
+.sub {
+  position: relative;
+  width: 297px;
+  height: 48px;
+  left: 1009px;
+  top: 450px;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: right;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.find {
+  position: relative;
+  height: 374px;
+  width: 380px;
+  left: 140px;
+  top: 140px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 40px 30px 30px 30px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: black;
+  display: inline-block;
+}
+.find-arrival {
+  font-size: 12px;
+  text-transform: uppercase;
+  position: absolute;
+  left: 30px;
+  top: 120px;
+}
+.find-departure {
+  font-size: 12px;
+  text-transform: uppercase;
+  position: absolute;
+  left: 200px;
+  top: 120px;
+}
+
+input[name=date] {
+  width: 150px;
+  height: 44px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  color: rgba(31, 32, 65, 0.75);
+  padding-left: 15px;
+  font-size: 14px;
+  cursor: default;
+}
+input[name=date]:focus {
+  outline: none;
+}
+
+#butt {
+  position: absolute;
+  width: 44px;
+  height: 41px;
+  left: 105px;
+  top: 30px;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  border: 0px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-image: url("/dropd.a68cdfe8.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#butt:hover {
+  background-color: #f7f7f7;
+}
+
+#butt2 {
+  position: absolute;
+  width: 44px;
+  height: 41px;
+  left: 105px;
+  top: 30px;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  border: 0px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-image: url("/dropd.a68cdfe8.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#butt2:hover {
+  background-color: #f7f7f7;
+}
+
+/*# sourceMappingURL=/main.1f19ae8e.css.map */
