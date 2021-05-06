@@ -32,11 +32,11 @@ body {
 .nav {
     display: flex;
     list-style: none;
-    height: 18px;
-    margin-left: 284px;
+    height: 17px;
+    margin-left: 247px;
         &-list {
         margin-right: 20px;
-        margin-left: 0;
+        margin-left: 0px;
         cursor:default;
     }
         &-item {
@@ -85,6 +85,7 @@ body {
     background: rgba(188, 156, 255, 0.02);
     padding-left: 0px;
     padding-top: 10px;
+    
     background-color: white;
     &-link {
         margin-top: 10px;
@@ -103,13 +104,15 @@ li.nav-list:hover li.drop-link{
     background-repeat: no-repeat;
     width: 70px;
     background-position: right;
+    padding-left: 1px;
+    margin-left: 4px;
 }
 .wrapper {
     
     background-image: url(../src/img/mainBG.jpg);
-    max-width: 1440px;
-    min-width: 1440px;
-    height: 900px;
+    background-position: center 100%;
+    width: 1440px;
+    height: 830px;
     background-repeat: no-repeat;
     margin: 0px auto;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
@@ -131,7 +134,7 @@ li.nav-list:hover li.drop-link{
     height: 374px;
     width: 380px;
     left: 140px;
-    top: 140px;
+    top: 70px;
     border-radius: 4px;
     background-color: white;
     border: 1px solid rgba(0, 0, 0, 0.12);
@@ -152,14 +155,15 @@ li.nav-list:hover li.drop-link{
             text-transform: uppercase;
             position: absolute;
             left: 30px;
-            top: 120px;
+            top: 112px;
+            
         }
         &-departure {
             font-size: 12px;
             text-transform: uppercase;
             position: absolute;
             left: 200px;
-            top: 120px;
+            top: 112px;
         }
     }
 input[name='date'] {
@@ -171,8 +175,11 @@ input[name='date'] {
     background-color: white;
     color: $darkTx;
     padding-left: 15px;
+    
     font-size: 14px;
     cursor: default;
+    margin-left: -1px;
+    margin-top: -1px;
         &:focus{
             outline: none;
     }
@@ -181,7 +188,7 @@ input[name='date'] {
     position: absolute;
     width: 44px;
     height: 41px;
-    left: 105px;
+    left: 104px;
     top: 30px;
     align-items: center;
     text-align: center;
@@ -201,7 +208,7 @@ input[name='date'] {
     position: absolute;
     width: 44px;
     height: 41px;
-    left: 105px;
+    left: 104px;
     top: 30px;
     align-items: center;
     text-align: center;

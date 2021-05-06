@@ -201,7 +201,7 @@ $(document).ready(function () {
     range: true,
     todayButton: true,
     clearButton: true,
-    minDate: new Date(),
+    // minDate: new Date(),
     toggleSelected: true,
     onSelect: function onSelect(fd) {
       $('#startdate').val(fd.split(",")[0]);

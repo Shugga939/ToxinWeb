@@ -198,7 +198,7 @@
 .datepickers-container {
   position: absolute;
   left: 0;
-  top: 0; }
+  top: -7px; }
   @media print {
     .datepickers-container {
       display: none; } }
@@ -213,9 +213,10 @@
   font-family: Montserrat, sans-serif;
   font-size: 14px;
   color:#1F204180;
-  width: 320px;
+  width: 318px;
   height: auto;
   position: absolute;
+  padding-top: 5px;
   left: -100000px;
   opacity: 0;
   transition: opacity 0.3s ease, left 0s 0.3s, -webkit-transform 0.3s ease;
@@ -300,8 +301,9 @@
     top: calc(50% - 10px / 2); }
 
 .datepicker--body {
-  padding-left: 20px;  /*отступы по бокам*/
-  padding-right: 20px;
+  padding-top: 1px;
+  padding-left: 17px;  /*отступы по бокам*/
+  padding-right: 15px;
   display: none; }
   .datepicker--body.active {
     display: block; }
@@ -337,8 +339,8 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
  /* border-bottom: 1px solid #efefef;    Убираем полосу */
-  min-height: 32px;
-  padding-top: 10px;
+  height: 50px;
+  padding-top: 2px;
   padding-bottom: 15px; }
   .-only-timepicker- .datepicker--nav {
     display: none; }
@@ -360,8 +362,8 @@
           justify-content: center; }
 
 .datepicker--nav-action {
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 15px;
+  margin-right: 15px;
   width: 32px;
   border-radius: 4px;
   -webkit-user-select: none;
@@ -408,7 +410,9 @@
   display: -ms-flexbox;
   display: flex;
   flex-direction: row-reverse;
-  padding: 4px;
+  padding-top: 4px;
+  padding-right: 6px;
+  padding-bottom: 6px;
   justify-content: space-between;
  /* border-top: 1px solid #efefef;    убираем нижнюю полосу */}
 
