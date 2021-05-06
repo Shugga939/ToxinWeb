@@ -200,9 +200,9 @@ $(document).ready(function () {
   $('#startdate').datepicker({
     range: true,
     todayButton: true,
-    clearButton: true
-  });
-  $('#startdate').datepicker({
+    clearButton: true,
+    minDate: new Date(),
+    toggleSelected: true,
     onSelect: function onSelect(fd) {
       $('#startdate').val(fd.split(",")[0]);
       $('#enddate').val(fd.split(",")[1]);

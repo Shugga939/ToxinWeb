@@ -8,19 +8,17 @@ $('#startdate').datepicker({
     range: true,
     todayButton: true,
     clearButton: true,
+    minDate: new Date(),
+    toggleSelected: true,
     
-    
-})
-    
-$('#startdate').datepicker({
     
     onSelect: function(fd){
         $('#startdate').val(fd.split(",")[0]);
         $('#enddate').val(fd.split(",")[1]);
         
     }
-
 })
+
 })
 $("#butt").click( function (){
     if(startdate.hasClass('shower')) {
