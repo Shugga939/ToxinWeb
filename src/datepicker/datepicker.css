@@ -305,6 +305,9 @@
   .-only-timepicker- .datepicker--nav {
     display: none; }
 
+.arrows-calendar{    /*кастомный цвет стрелок*/
+  color: #BC9CFF;
+}
 .datepicker--nav-title,
 .datepicker--nav-action {
   display: -webkit-flex;
@@ -319,6 +322,8 @@
           justify-content: center; }
 
 .datepicker--nav-action {
+  margin-left: 5px;
+  margin-right: 5px;
   width: 32px;
   border-radius: 4px;
   -webkit-user-select: none;
