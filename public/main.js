@@ -24,7 +24,9 @@ $("#butt").click( function (){
         startdate.removeClass('shower');
         datepicker.hide()}
     else {startdate.addClass('shower');
-        datepicker.show()}
+        datepicker.show()
+        $(this).css({"background-image": "url('../src/img/upd.svg')"})
+        }
 })
 
 $("#butt2").click( function (){

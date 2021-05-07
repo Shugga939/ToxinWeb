@@ -195,6 +195,7 @@ input[name=date]:focus {
   background-image: url("/dropd.a68cdfe8.svg");
   background-repeat: no-repeat;
   background-position: center;
+  z-index: 1;
 }
 #butt:hover, #butt2:hover {
   background-color: #f7f7f7;

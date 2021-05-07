@@ -216,6 +216,9 @@ $("#butt").click(function () {
   } else {
     startdate.addClass('shower');
     datepicker.show();
+    $(this).css({
+      "background-image": "url('../src/img/upd.svg')"
+    });
   }
 });
 $("#butt2").click(function () {
