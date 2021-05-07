@@ -209,30 +209,26 @@ $(document).ready(function () {
     }
   });
 });
-$("#butt").click(function () {
-  if (startdate.hasClass('shower')) {
-    startdate.removeClass('shower');
+$("#butt, #butt2").click(function () {
+  if (startdate.hasClass('show')) {
+    startdate.removeClass('show');
     datepicker.hide();
   } else {
-    startdate.addClass('shower');
-    datepicker.show();
-    $(this).css({
-      "background-image": "url('../src/img/upd.svg')"
-    });
-  }
-});
-$("#butt2").click(function () {
-  if (startdate.hasClass('shower')) {
-    startdate.removeClass('shower');
-    datepicker.hide();
-  } else {
-    startdate.addClass('shower');
+    startdate.addClass('show');
     datepicker.show();
   }
 });
+/*$("#butt2").click( function (){
+    if(startdate.hasClass('shower')) {
+        startdate.removeClass('shower');
+        datepicker.hide()}
+    else {startdate.addClass('shower');
+        datepicker.show()}
+})*/
+
 $(document).click(function (event) {
-  if (startdate.hasClass('shower')) {
-    startdate.removeClass('shower');
+  if (startdate.hasClass('show')) {
+    startdate.removeClass('show');
   }
 });
 /*
@@ -267,7 +263,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62841" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56595" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

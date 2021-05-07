@@ -199,12 +199,12 @@ input[name='date'] {
     background-image: url("../src/img/dropd.svg");
     background-repeat: no-repeat;
     background-position: center;
-    z-index: 1;
+    
         &:hover{
         background-color: hsl(0, 0%, 97%);
     }
-
 }
+
 
 
 
