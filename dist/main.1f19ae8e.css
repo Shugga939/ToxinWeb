@@ -180,11 +180,11 @@ input[name=date]:focus {
   outline: none;
 }
 
-#butt {
+#butt, #butt2 {
   position: absolute;
   width: 44px;
-  height: 41px;
-  left: 104px;
+  height: 40px;
+  left: 103px;
   top: 30px;
   align-items: center;
   text-align: center;
@@ -196,27 +196,7 @@ input[name=date]:focus {
   background-repeat: no-repeat;
   background-position: center;
 }
-#butt:hover {
-  background-color: #f7f7f7;
-}
-
-#butt2 {
-  position: absolute;
-  width: 44px;
-  height: 41px;
-  left: 104px;
-  top: 30px;
-  align-items: center;
-  text-align: center;
-  background-color: white;
-  border: 0px;
-  border-radius: 4px;
-  cursor: pointer;
-  background-image: url("/dropd.a68cdfe8.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-#butt2:hover {
+#butt:hover, #butt2:hover {
   background-color: #f7f7f7;
 }
 

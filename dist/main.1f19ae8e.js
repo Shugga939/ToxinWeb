@@ -201,7 +201,7 @@ $(document).ready(function () {
     range: true,
     todayButton: true,
     clearButton: true,
-    // minDate: new Date(),
+    minDate: new Date(),
     toggleSelected: true,
     onSelect: function onSelect(fd) {
       $('#startdate').val(fd.split(",")[0]);
@@ -264,7 +264,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61834" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62841" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

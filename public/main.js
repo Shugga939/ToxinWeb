@@ -8,15 +8,13 @@ $('#startdate').datepicker({
     range: true,
     todayButton: true,
     clearButton: true,
-   // minDate: new Date(),
+    minDate: new Date(),
     toggleSelected: true,
-    
     
     
     onSelect: function(fd){
         $('#startdate').val(fd.split(",")[0]);
         $('#enddate').val(fd.split(",")[1]);
-        
     }
 })
 

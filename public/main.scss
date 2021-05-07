@@ -184,11 +184,11 @@ input[name='date'] {
             outline: none;
     }
 }
-#butt{
+#butt,#butt2{
     position: absolute;
     width: 44px;
-    height: 41px;
-    left: 104px;
+    height: 40px;
+    left: 103px;
     top: 30px;
     align-items: center;
     text-align: center;
@@ -204,24 +204,5 @@ input[name='date'] {
     }
 }
 
-#butt2{
-    position: absolute;
-    width: 44px;
-    height: 41px;
-    left: 104px;
-    top: 30px;
-    align-items: center;
-    text-align: center;
-    background-color: white;
-    border: 0px;
-    border-radius: 4px;
-    cursor: pointer;
-    background-image: url("../src/img/dropd.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    &:hover{
-    background-color: hsl(0, 0%, 97%);
-    }
-}
 
 
