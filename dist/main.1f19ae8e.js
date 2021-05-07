@@ -208,28 +208,35 @@ $(document).ready(function () {
       $('#enddate').val(fd.split(",")[1]);
     }
   });
-});
-$("#butt, #butt2").click(function () {
-  if (startdate.hasClass('show')) {
-    startdate.removeClass('show');
-    datepicker.hide();
-  } else {
-    startdate.addClass('show');
-    datepicker.show();
-  }
-});
-/*$("#butt2").click( function (){
-    if(startdate.hasClass('shower')) {
-        startdate.removeClass('shower');
-        datepicker.hide()}
-    else {startdate.addClass('shower');
-        datepicker.show()}
-})*/
-
-$(document).click(function (event) {
-  if (startdate.hasClass('show')) {
-    startdate.removeClass('show');
-  }
+  $("#butt").click(function () {
+    if (startdate.hasClass('show_datepicker')) {
+      startdate.removeClass('show_datepicker');
+      datepicker.hide();
+      $("#butt").css("background-image", "url('dropd.a68cdfe8.svg')");
+    } else {
+      startdate.addClass('show_datepicker');
+      datepicker.show();
+      $("#butt").css("background-image", "url('upd.05f0ce32.svg')");
+    }
+  });
+  $("#butt2").click(function () {
+    if (startdate.hasClass('show_datepicker')) {
+      startdate.removeClass('show_datepicker');
+      datepicker.hide();
+      $("#butt2").css("background-image", "url('dropd.a68cdfe8.svg')");
+    } else {
+      startdate.addClass('show_datepicker');
+      datepicker.show();
+      $("#butt2").css("background-image", "url('upd.05f0ce32.svg')");
+    }
+  });
+  $('data-action="today"').click(function () {
+    alert("asd");
+  });
+  /*$(document).click(function(event){
+      if (startdate.hasClass('show')){
+      startdate.removeClass('show')}
+  })*/
 });
 /*
 startdate.click(function (){
@@ -263,7 +270,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56595" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64526" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
