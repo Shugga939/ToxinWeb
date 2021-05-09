@@ -319,7 +319,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         $(window).on('resize.adp', this._onResize.bind(this));
         $('body').on('mouseup.adp', this._onMouseUpBody.bind(this));
       },
-      //блокирование открытия календаря по клику на инпут
       _bindKeyboardEvents: function _bindKeyboardEvents() {
         this.$el.on('keydown.adp', this._onKeyDown.bind(this));
         this.$el.on('keyup.adp', this._onKeyUp.bind(this));
@@ -1262,7 +1261,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         if (e.originalEvent.inFocus) return;
 
         if (this.visible && !this.inFocus) {
-          this.show(); //изменено с hide, для блокировки автозакрытия при клике body
+          this.show(); //изменено с hide, для блокировки автозакрытия при клике на document
         }
       },
       _onMouseUpEl: function _onMouseUpEl(e) {
@@ -2325,7 +2324,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64526" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54932" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

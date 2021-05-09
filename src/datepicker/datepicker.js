@@ -202,8 +202,9 @@
             this.$el.on('blur.adp', this._onBlur.bind(this));
             this.$el.on('keyup.adp', this._onKeyUpGeneral.bind(this));
             $(window).on('resize.adp', this._onResize.bind(this));
-            $('body').on('mouseup.adp', this._onMouseUpBody.bind(this));
-        },                                                             //блокирование открытия календаря по клику на инпут
+            $('body').on('mouseup.adp', this._onMouseUpBody.bind(this)) ;
+            
+        },                                                             
 
         _bindKeyboardEvents: function () {
             this.$el.on('keydown.adp', this._onKeyDown.bind(this));
@@ -1156,7 +1157,8 @@
             if (e.originalEvent.inFocus) return;
 
             if (this.visible && !this.inFocus) {
-                this.show();    //изменено с hide, для блокировки автозакрытия при клике body
+                this.show();    //изменено с hide, для блокировки автозакрытия при клике на document
+
             }
         },
 

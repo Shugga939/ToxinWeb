@@ -213,6 +213,7 @@ $(document).ready(function () {
       startdate.removeClass('show_datepicker');
       datepicker.hide();
       $("#butt").css("background-image", "url('dropd.a68cdfe8.svg')");
+      $("#butt2").css("background-image", "url('dropd.a68cdfe8.svg')");
     } else {
       startdate.addClass('show_datepicker');
       datepicker.show();
@@ -224,19 +225,25 @@ $(document).ready(function () {
       startdate.removeClass('show_datepicker');
       datepicker.hide();
       $("#butt2").css("background-image", "url('dropd.a68cdfe8.svg')");
+      $("#butt").css("background-image", "url('dropd.a68cdfe8.svg')");
     } else {
       startdate.addClass('show_datepicker');
       datepicker.show();
       $("#butt2").css("background-image", "url('upd.05f0ce32.svg')");
     }
   });
-  $('data-action="today"').click(function () {
-    alert("asd");
+  $('.datepicker--button[data-action="today"]').click(function () {
+    $("#butt").css("background-image", "url('dropd.a68cdfe8.svg')");
+    $("#butt2").css("background-image", "url('dropd.a68cdfe8.svg')");
+    datepicker.hide();
+    startdate.removeClass('show_datepicker');
   });
-  /*$(document).click(function(event){
-      if (startdate.hasClass('show')){
-      startdate.removeClass('show')}
-  })*/
+  $(document).click(function (event) {
+    //не работает DOIT 
+    var datepickerBody = $("#butt");
+
+    if (datepickerBody.is(event.target) && startdate.hasClass('show_datepicker')) {}
+  });
 });
 /*
 startdate.click(function (){
@@ -270,7 +277,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64526" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54932" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
