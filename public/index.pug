@@ -5,7 +5,7 @@ block variables
 block content
     .wrapper
         div.find Найдём номера под ваши пожелания  
-            div.find-arrival Прибытие<br>
+            .find-arrival Прибытие<br>
                 input(
                     type="text"
                     name="date"
@@ -14,7 +14,7 @@ block content
                     placeholder = "ДД.ММ.ГГГГ"
                     )
                 button#butt
-            div.find-departure Выезд <br>
+            .find-departure Выезд <br>
                 input(
                     type="text"
                     name="date"
@@ -23,6 +23,14 @@ block content
                     placeholder = "ДД.ММ.ГГГГ"
                     )
                 button#butt2
+            .find-guests Гости
+                input(
+                    type="text"
+                    name="guests"
+                    readonly = "true"
+                    placeholder = "Сколько гостей"
+                    )
+                button#butt3
 
         .sub Лучшие номера для вашей работы, <br>отдыха и просто вдохновения
                 

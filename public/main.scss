@@ -4,6 +4,26 @@ $greenGr: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 $greyTx: rgba(31, 33, 65, 0.502);
 $darkTx: rgba(31, 32, 65, 0.75);
 
+@mixin button($left) {
+    position: absolute;
+    width: 44px;
+    height: 40px;
+    left: $left;
+    top: 30px;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    border: 0px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-image: url("../src/img/dropd.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    
+        &:hover{
+        background-color: hsl(0, 0%, 97%);
+    }
+}
 
 body {
     font-family: 'Montserrat', sans-serif;    
@@ -151,19 +171,26 @@ li.nav-list:hover li.drop-link{
     color: black;
     display: inline-block;
         &-arrival {
+            position: absolute;
             font-size: 12px;
             text-transform: uppercase;
-            position: absolute;
             left: 30px;
             top: 112px;
             
         }
         &-departure {
+            position: absolute;
             font-size: 12px;
             text-transform: uppercase;
-            position: absolute;
             left: 200px;
             top: 112px;
+        }
+        &-guests {
+            position: absolute;
+            font-size: 12px;
+            text-transform: uppercase;
+            top:205px;
+            left: 30px;
         }
     }
 input[name='date'] {
@@ -185,26 +212,28 @@ input[name='date'] {
     }
 }
 #butt,#butt2{
-    position: absolute;
-    width: 44px;
-    height: 40px;
-    left: 103px;
-    top: 30px;
-    align-items: center;
-    text-align: center;
-    background-color: white;
-    border: 0px;
-    border-radius: 4px;
-    cursor: pointer;
-    background-image: url("../src/img/dropd.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    
-        &:hover{
-        background-color: hsl(0, 0%, 97%);
-    }
+    @include button(103px)
 }
-
+#butt3{
+    @include button(273px)
+}
+input[name="guests"]{
+    width: 320px;
+    height: 44px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: white;
+    color: $darkTx;
+    padding-left: 15px;
+    font-size: 14px;
+    cursor: default;
+    margin-left: -1px;
+    margin-top: -1px;
+        &:focus{
+            outline: none;
+        }
+}
 
 
 
