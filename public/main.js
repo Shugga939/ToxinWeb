@@ -57,6 +57,10 @@ $(document).click(function(event){       //не работает DOIT
 $("#butt3").click(function(){
     $(".find-guestsChoice").slideToggle("showGuests")
 })
+$("#adult-").click(function(){
+    let count = $(".counterAdult").text();
+    alert(count)
+})
 })
 /*
 startdate.click(function (){
