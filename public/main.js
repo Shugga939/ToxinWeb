@@ -54,6 +54,9 @@ $(document).click(function(event){       //не работает DOIT
     if ((datepickerBody.is(event.target)) && startdate.hasClass('show_datepicker')){
     }
 })
+$("#butt3").click(function(){
+    $(".find-guestsChoice").slideToggle("showGuests")
+})
 })
 /*
 startdate.click(function (){

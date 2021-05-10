@@ -4,7 +4,7 @@ $greenGr: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 $greyTx: rgba(31, 33, 65, 0.502);
 $darkTx: rgba(31, 32, 65, 0.75);
 
-@mixin button($left) {
+@mixin dropButton($left) {
     position: absolute;
     width: 44px;
     height: 40px;
@@ -22,6 +22,25 @@ $darkTx: rgba(31, 32, 65, 0.75);
     
         &:hover{
         background-color: hsl(0, 0%, 97%);
+    }
+}
+
+@mixin input ($wd){
+    width: $wd;
+    height: 44px;
+    border: 1px solid rgba(31, 32, 65, 0.5);
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: white;
+    color: $darkTx;
+    padding-left: 15px;
+    
+    font-size: 14px;
+    cursor: default;
+    margin-left: -1px;
+    margin-top: -1px;
+        &:focus{
+            outline: none;
     }
 }
 
@@ -161,8 +180,7 @@ li.nav-list:hover li.drop-link{
     box-sizing: border-box;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    padding: 40px 30px 30px 30px;
-    font-size: 24px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 700;
     line-height: 29px;
@@ -170,70 +188,124 @@ li.nav-list:hover li.drop-link{
     cursor: default;
     color: black;
     display: inline-block;
+
+        h1{
+            position: relative;
+            top: 23px;
+            left: 30px;
+            width: 320px;
+        }    
         &-arrival {
             position: absolute;
-            font-size: 12px;
             text-transform: uppercase;
             left: 30px;
-            top: 112px;
+            top: 113px;
             
         }
         &-departure {
             position: absolute;
-            font-size: 12px;
             text-transform: uppercase;
             left: 200px;
-            top: 112px;
+            top: 113px;
         }
         &-guests {
             position: absolute;
-            font-size: 12px;
             text-transform: uppercase;
-            top:205px;
+            top:197px;
             left: 30px;
+        }
+        &-guestsChoice {
+            display: none;
+            position: absolute;
+            width: 320px;
+            height: 159px;
+            left: 29px;
+            top: 265px;
+            background: #FFFFFF;
+            text-transform: uppercase;
+            border: 1px solid rgba(31, 32, 65, 0.5);
+            border-radius: 0px 0px 2px 2px ;
+            box-sizing: border-box;
+            box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
         }
     }
 input[name='date'] {
-    width: 150px;
-    height: 44px;
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    box-sizing: border-box;
-    border-radius: 4px;
-    background-color: white;
-    color: $darkTx;
-    padding-left: 15px;
-    
-    font-size: 14px;
-    cursor: default;
-    margin-left: -1px;
-    margin-top: -1px;
-        &:focus{
-            outline: none;
-    }
+    @include input(150px);
 }
 #butt,#butt2{
-    @include button(103px)
+    @include dropButton(103px);
 }
 #butt3{
-    @include button(273px)
+    @include dropButton(273px);
 }
 input[name="guests"]{
-    width: 320px;
-    height: 44px;
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    box-sizing: border-box;
-    border-radius: 4px;
-    background-color: white;
-    color: $darkTx;
-    padding-left: 15px;
-    font-size: 14px;
-    cursor: default;
-    margin-left: -1px;
-    margin-top: -1px;
-        &:focus{
-            outline: none;
-        }
+    @include input(320px);
 }
 
+.visitors {
+    position: relative;
+    padding-top: 8px;
+    padding-left: 13px;
+    
+    .counterAdult,.counterChild,.counterBaby{
+        position: absolute;
+        left: 262px;;
+    }
 
-
+.minus {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 221px;
+    top: 7px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 22px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    padding-bottom: 3px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    padding-top: 3px;
+}
+.plus {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 283px;
+    top: 7px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 22px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    padding-bottom: 3px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    padding-top: 4px;
+    }
+}
+.find-buttons{
+    display: flex;
+    justify-content: space-between;
+    #clearCounter, #confirmCounter {
+        color: rgba(188, 156, 255, 1);
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-radius: 4px;
+        border:none;
+        background-color: #FFFFFF;
+        height: 30px;
+        width: 99px;
+        margin-top: 15px;
+            
+            &:hover{
+                background-color: hsl(0, 0%, 97%);
+        }
+    }
+}

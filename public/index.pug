@@ -4,7 +4,8 @@ block variables
 
 block content
     .wrapper
-        div.find Найдём номера под ваши пожелания  
+        div.find
+            h1 Найдём номера под ваши пожелания  
             .find-arrival Прибытие<br>
                 input(
                     type="text"
@@ -31,6 +32,22 @@ block content
                     placeholder = "Сколько гостей"
                     )
                 button#butt3
+            .find-guestsChoice
+                .visitors Взрослые
+                    button.minus(id = "adult-") -
+                    span.counterAdult 0
+                    button.plus(id = "adult+") +
+                .visitors Дети
+                    button.minus(id = "child-") -
+                    span.counterChild 0
+                    button.plus(id = "child+") +
+                .visitors Младенцы
+                    button.minus(id = "baby-") -
+                    span.counterBaby 0
+                    button.plus(id = "baby+") +
+                .find-buttons
+                    button#clearCounter Очистить
+                    button#confirmCounter Применить
 
         .sub Лучшие номера для вашей работы, <br>отдыха и просто вдохновения
                 

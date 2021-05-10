@@ -137,8 +137,7 @@ li.nav-list:hover li.drop-link {
   box-sizing: border-box;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  padding: 40px 30px 30px 30px;
-  font-size: 24px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 700;
   line-height: 29px;
@@ -147,32 +146,49 @@ li.nav-list:hover li.drop-link {
   color: black;
   display: inline-block;
 }
+.find h1 {
+  position: relative;
+  top: 23px;
+  left: 30px;
+  width: 320px;
+}
 .find-arrival {
   position: absolute;
-  font-size: 12px;
   text-transform: uppercase;
   left: 30px;
-  top: 112px;
+  top: 113px;
 }
 .find-departure {
   position: absolute;
-  font-size: 12px;
   text-transform: uppercase;
   left: 200px;
-  top: 112px;
+  top: 113px;
 }
 .find-guests {
   position: absolute;
-  font-size: 12px;
   text-transform: uppercase;
-  top: 205px;
+  top: 197px;
   left: 30px;
+}
+.find-guestsChoice {
+  display: none;
+  position: absolute;
+  width: 320px;
+  height: 159px;
+  left: 29px;
+  top: 265px;
+  background: #FFFFFF;
+  text-transform: uppercase;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  border-radius: 0px 0px 2px 2px;
+  box-sizing: border-box;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 }
 
 input[name=date] {
   width: 150px;
   height: 44px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
+  border: 1px solid rgba(31, 32, 65, 0.5);
   box-sizing: border-box;
   border-radius: 4px;
   background-color: white;
@@ -230,7 +246,7 @@ input[name=date]:focus {
 input[name=guests] {
   width: 320px;
   height: 44px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
+  border: 1px solid rgba(31, 32, 65, 0.5);
   box-sizing: border-box;
   border-radius: 4px;
   background-color: white;
@@ -243,6 +259,72 @@ input[name=guests] {
 }
 input[name=guests]:focus {
   outline: none;
+}
+
+.visitors {
+  position: relative;
+  padding-top: 8px;
+  padding-left: 13px;
+}
+.visitors .counterAdult, .visitors .counterChild, .visitors .counterBaby {
+  position: absolute;
+  left: 262px;
+}
+.visitors .minus {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 221px;
+  top: 7px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 22px;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  padding-bottom: 3px;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  padding-top: 3px;
+}
+.visitors .plus {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 283px;
+  top: 7px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 22px;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  padding-bottom: 3px;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  padding-top: 4px;
+}
+
+.find-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.find-buttons #clearCounter, .find-buttons #confirmCounter {
+  color: #bc9cff;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  background-color: #FFFFFF;
+  height: 30px;
+  width: 99px;
+  margin-top: 15px;
+}
+.find-buttons #clearCounter:hover, .find-buttons #confirmCounter:hover {
+  background-color: #f7f7f7;
 }
 
 /*# sourceMappingURL=/main.1f19ae8e.css.map */
