@@ -58,8 +58,10 @@ $("#butt3").click(function(){
     $(".find-guestsChoice").slideToggle("showGuests")
 })
 $("#adult-").click(function(){
-    let count = $(".counterAdult").text();
-    alert(count)
+    let count = $("#counterAdult").text();
+    $("#counterAdult").text(Number.parseInt(count)+1); 
+
+    
 })
 })
 /*
