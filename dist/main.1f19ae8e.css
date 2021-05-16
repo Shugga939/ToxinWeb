@@ -358,33 +358,66 @@ input[name=guests]:focus {
 .footer-nav {
   position: absolute;
   margin-left: 400px;
-  margin-top: 90px;
+  margin-top: 93px;
   display: flex;
-  width: 1300px;
+  justify-content: space-between;
+  width: 900px;
 }
 .footer-nav-list {
+  position: relative;
   color: black;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 12px;
+  width: 260px;
 }
 .footer-nav-item {
+  height: 20px;
   color: rgba(31, 33, 65, 0.502);
   text-transform: none;
   list-style: none;
   font-weight: normal;
-  padding-top: 15px;
+  margin-top: 18px;
+  font-size: 14px;
   line-height: 25px;
 }
 .footer-nav-email {
+  position: relative;
   font-size: 14px;
   height: 40px;
-  width: 300px;
+  width: 246px;
   border-width: 1px;
   border-radius: 3px;
   color: rgba(31, 33, 65, 0.502);
   border: 1px solid;
   padding-left: 10px;
+  line-height: 20px;
+  margin-top: 52px;
+}
+.footer-nav-email:focus {
+  outline: none;
+}
+.footer-nav-email-confirm {
+  position: absolute;
+  width: 44px;
+  height: 40px;
+  left: 253px;
+  top: 30px;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  border: 0px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-image: url("/dropd.a68cdfe8.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 74.5px;
+  color: #bc9cff;
+  background-image: none;
+}
+.footer-nav-email-confirm:hover {
+  background-color: #f7f7f7;
 }
 .footer-line {
   position: relative;

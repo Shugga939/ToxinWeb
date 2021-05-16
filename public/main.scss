@@ -343,32 +343,51 @@ input[name="guests"]{
         &-nav {
             position: absolute;
             margin-left: 400px;
-            margin-top: 90px;
+            margin-top: 93px;
             display:flex;
-            width: 1300px;
+            justify-content: space-between;
+            width: 900px;
             &-list{
+                position: relative;
                 color: black;
                 text-transform: uppercase;
                 font-weight: bold;
                 font-size: 12px;
+                width: 260px;
             }
             &-item {
+                height: 20px;
                 color: $greyTx;
                text-transform: none;
                list-style: none;
                font-weight: normal;
-               padding-top: 15px;
+               margin-top: 18px;
+               font-size: 14px;
                line-height: 25px;
             }
             &-email {
+                position: relative;
                 font-size: 14px;
                 height: 40px;
-                width: 300px;
+                width: 246px;
                 border-width: 1px;
                 border-radius: 3px;
                 color: $greyTx;
                 border: 1px solid;
                 padding-left: 10px;
+                line-height: 20px;
+                margin-top: 52px;
+                    &:focus{
+                        outline: none;
+                    }
+                &-confirm{
+                    @include dropButton(253px);
+                    margin-top: 74.5px;
+                    color: $pinkC;
+                    background-image: none;
+                    
+                    
+                }
             }
         
         }
