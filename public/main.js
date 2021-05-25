@@ -1,4 +1,4 @@
-import './main.scss';
+import '/main.scss';
 var datepicker = $('#startdate').datepicker().data('datepicker');
 var startdate = $('#startdate');
 

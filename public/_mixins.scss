@@ -1,0 +1,39 @@
+@mixin dropButton($left) {
+    position: absolute;
+    width: 44px;
+    height: 40px;
+    left: $left;
+    top: 30px;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    border: 0px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-image: url("../src/img/dropd.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    
+        &:hover{
+        background-color: hsl(0, 0%, 97%);
+    }
+}
+
+@mixin input ($wd){
+    width: $wd;
+    height: 44px;
+    border: 1px solid rgba(31, 32, 65, 0.5);
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: white;
+    color: $darkTx;
+    padding-left: 15px;
+    
+    font-size: 14px;
+    cursor: default;
+    margin-left: -1px;
+    margin-top: -1px;
+        &:focus{
+            outline: none;
+    }
+}

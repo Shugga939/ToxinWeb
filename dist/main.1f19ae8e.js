@@ -192,7 +192,7 @@ module.hot.accept(reloadCSS);
 },{"./..\\src\\img\\dropd.svg":[["dropd.a68cdfe8.svg","../src/img/dropd.svg"],"../src/img/dropd.svg"],"./..\\src\\img\\mainBG.jpg":[["mainBG.b3cc9af1.jpg","../src/img/mainBG.jpg"],"../src/img/mainBG.jpg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"main.js":[function(require,module,exports) {
 "use strict";
 
-require("./main.scss");
+require("/main.scss");
 
 var datepicker = $('#startdate').datepicker().data('datepicker');
 var startdate = $('#startdate');
@@ -256,7 +256,7 @@ $(document).ready(function () {
 startdate.click(function (){
     datepicker.hide();
 })*/
-},{"./main.scss":"main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"/main.scss":"main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -284,7 +284,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52292" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65315" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
