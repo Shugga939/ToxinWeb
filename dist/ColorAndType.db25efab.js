@@ -117,79 +117,12 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"main.scss":[function(require,module,exports) {
+})({"../UIKit/ColorAndType/ColorAndType.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\src\\img\\dropd.svg":[["dropd.a68cdfe8.svg","../src/img/dropd.svg"],"../src/img/dropd.svg"],"./..\\src\\img\\mainBG.jpg":[["mainBG.b3cc9af1.jpg","../src/img/mainBG.jpg"],"../src/img/mainBG.jpg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"main.js":[function(require,module,exports) {
-"use strict";
-
-require("/main.scss");
-
-var datepicker = $('#startdate').datepicker().data('datepicker');
-var startdate = $('#startdate');
-$(document).ready(function () {
-  $('#startdate').datepicker({
-    range: true,
-    todayButton: true,
-    clearButton: true,
-    minDate: new Date(),
-    toggleSelected: true,
-    onSelect: function onSelect(fd) {
-      $('#startdate').val(fd.split(",")[0]);
-      $('#enddate').val(fd.split(",")[1]);
-    }
-  });
-  $("#butt").click(function () {
-    if (startdate.hasClass('show_datepicker')) {
-      startdate.removeClass('show_datepicker');
-      datepicker.hide();
-      $("#butt").css("background-image", "url('dropd.a68cdfe8.svg')");
-      $("#butt2").css("background-image", "url('dropd.a68cdfe8.svg')");
-    } else {
-      startdate.addClass('show_datepicker');
-      datepicker.show();
-      $("#butt").css("background-image", "url('upd.05f0ce32.svg')");
-    }
-  });
-  $("#butt2").click(function () {
-    if (startdate.hasClass('show_datepicker')) {
-      startdate.removeClass('show_datepicker');
-      datepicker.hide();
-      $("#butt2").css("background-image", "url('dropd.a68cdfe8.svg')");
-      $("#butt").css("background-image", "url('dropd.a68cdfe8.svg')");
-    } else {
-      startdate.addClass('show_datepicker');
-      datepicker.show();
-      $("#butt2").css("background-image", "url('upd.05f0ce32.svg')");
-    }
-  });
-  $('.datepicker--button[data-action="today"]').click(function () {
-    $("#butt").css("background-image", "url('dropd.a68cdfe8.svg')");
-    $("#butt2").css("background-image", "url('dropd.a68cdfe8.svg')");
-    datepicker.hide();
-    startdate.removeClass('show_datepicker');
-  });
-  $(document).click(function (event) {
-    //не работает DOIT 
-    var datepickerBody = $("#butt");
-
-    if (datepickerBody.is(event.target) && startdate.hasClass('show_datepicker')) {}
-  });
-  $("#butt3").click(function () {
-    $(".find-guestsChoice").slideToggle("showGuests");
-  });
-  $("#adult-").click(function () {
-    var count = $("#counterAdult").text();
-    $("#counterAdult").text(Number.parseInt(count) + 1);
-  });
-});
-/*
-startdate.click(function (){
-    datepicker.hide();
-})*/
-},{"/main.scss":"main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -531,6 +464,6 @@ module.exports = function loadJSBundle(bundle) {
   });
 };
 },{}],0:[function(require,module,exports) {
-var b=require("../node_modules/parcel-bundler/src/builtins/bundle-loader.js");b.register("js",require("../node_modules/parcel-bundler/src/builtins/loaders/browser/js-loader.js"));b.load([]).then(function(){require("main.js");});
+var b=require("../node_modules/parcel-bundler/src/builtins/bundle-loader.js");b.register("js",require("../node_modules/parcel-bundler/src/builtins/loaders/browser/js-loader.js"));b.load([]);
 },{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js",0], null)
-//# sourceMappingURL=/main.1f19ae8e.js.map
+//# sourceMappingURL=/ColorAndType.db25efab.js.map

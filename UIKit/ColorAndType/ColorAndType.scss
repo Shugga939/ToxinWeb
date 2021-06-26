@@ -1,0 +1,118 @@
+@import "../variables";
+@import "../mixins";
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 19px;
+    background-color: #FFFFFF;
+    width: 1440px;
+    height: 900px;    
+}
+.wrapper{
+    background-color: #FFFFFF;
+    width: 1440px;
+    height: 900px;
+}
+.logo{
+    position: relative;
+    width: 106px;
+    height: 40px;
+    padding: 30px;
+}
+.colors {
+    position: absolute;
+    width: 260px;
+    top: 145px;
+    left: 150px;
+    &-square {
+        width: 70px;
+        height: 70px;
+        border-radius: 6px;
+        margin-bottom: 20px; 
+    }   
+    &-text {
+        position: relative;
+        width: 171px;
+        top: 7px;
+        left: 110px;
+        font-weight: bold;
+        font-size: 19px;
+        line-height: 28px;
+    }
+    &-number {
+    position: relative;
+    width: 171px;
+    top: 11px;
+    left: 110px;
+    }
+}
+.fontDescription {
+    position: absolute;
+    width: 369px;
+    top: 145px;
+    left: 854px;
+
+}
+.fonts {
+    position: relative;
+    &-tagH1{
+        position: absolute;
+        font-size: 24px;
+        color: $darkShade25;
+
+    }
+    &-textH1{
+        position: relative;
+        left: 60px;
+        top: 0;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 51px;
+
+    }
+    &-tagH2{
+        position: absolute;
+        font-size: 19px;
+        color: $darkShade25;
+    }
+    &-textH2{
+        position: relative;
+        left: 60px;
+        top: 0;
+        font-weight: bold;
+        font-size: 19px;
+        line-height: 24px;
+        margin-bottom: 51px;
+    }
+    &-tagH3{
+        position: absolute;
+        font-size: 12px;
+        color: $darkShade25;
+    }
+    &-textH3{
+        position: relative;
+        left: 60px;
+        top: 0;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        margin-bottom: 51px;
+    }
+    &-tagBody{
+        position: absolute;
+        font-size: 14px;
+
+        color: $darkShade25;
+    }
+    &-textBody{
+        position: relative;
+        left: 60px;
+        top: 0;
+
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 51px;
+    }
+}
