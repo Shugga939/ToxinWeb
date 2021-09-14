@@ -36,7 +36,7 @@
 @mixin input ($wd){
     width: $wd;
     height: 44px;
-    border: 1px solid rgba(31, 32, 65, 0.25);
+    border: 1px solid $darkShade25;
     box-sizing: border-box;
     border-radius: 4px;
     background-color: white;

@@ -1,0 +1,252 @@
+@import '../variables';
+@import '../mixins';
+@import '../modules';
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url('../../src/material-icons.woff2') format('woff2'),
+}
+
+.material-icons {
+ font-family: 'Material Icons';
+ font-weight: normal;
+ font-style: normal;
+ font-size: 24px;  
+ display: inline-block;
+ line-height: 1;
+ text-transform: none;
+ letter-spacing: normal;
+ word-wrap: normal;
+ white-space: nowrap;
+ direction: ltr;
+ -webkit-font-smoothing: antialiased;
+ text-rendering: optimizeLegibility;
+ -moz-osx-font-smoothing: grayscale;
+ font-feature-settings: 'liga';
+}
+body{
+  font-family: 'Montserrat', sans-serif;
+  @include fontBody;
+  background-color: #FFFFFF;
+
+  
+  .wrapper{
+    position: relative;
+    padding-bottom: 50px;
+    width: 1440px;
+    background-color: $darkShade05;
+    box-sizing: content-box;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .logo{
+      margin-right: 1330px;
+      width: 50px;
+      height: 40px;
+      padding: 30px;
+    }
+    .header {
+      position: relative;
+      margin-top: 40px;
+      margin-left: 0;
+      background-color: white;
+      display: flex;
+      box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+      height: 70px;
+      align-items: center;
+      max-width: 1440px;
+      min-width: 1440px;
+      z-index: 1;
+     //для лэндинга margin: 0px auto; 
+      &-logo{
+        margin-left: 140px;
+        display: flex;
+      }
+      &-nav {
+        padding-right: 2px;
+        margin-left: 245px;
+        &-loginned{
+          margin-left: 427px;
+        }
+        &-list{
+          position: relative;
+          display: flex;
+          list-style: none;
+
+          .bold_font{
+            font-weight: bold;
+            color: $darkShade75;
+          }
+
+          &-item {
+            margin-right: 20px;
+            margin-left: 0px;
+          
+            &>a{
+              text-decoration: none;
+              color: $darkShade50;
+            }
+          }
+          .arrow-down {
+            background-image: url(src/dropd.svg);
+            background-repeat: no-repeat;
+            background-position: right;
+            padding-right: 18px;
+            margin-right: 26px;
+            cursor: default;
+            &:hover>.drop-list {
+              display: block;
+            }
+          }
+
+          .drop-list {
+            position: absolute;
+            width: 210px;
+            padding-left: 0px;
+            margin-top: 10px;
+            background-color: white;
+            box-sizing: content-box;
+            box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+            display: none;
+            &-item {
+              margin-right: 20px;
+              margin-left: 10px;
+              margin-top: 5px;
+              margin-bottom: 5px;
+              list-style: none;
+
+              &>a{
+                text-decoration: none;
+                color: $darkShade50;
+              }
+            }
+          }
+        }
+      }
+      .button_header_login{
+        padding: 8px 18px;
+        margin-right: 23px;
+        margin-left: 3px;
+      }
+      .button_header_registration {
+        padding: 10px 19px;
+      }
+      &-username{
+        height: 30px;
+        border-left: 1px solid $darkShade25;
+        padding-left: 19px;
+        line-height: 33px;
+      }
+    }
+    .footer {
+      position: relative;
+      color: $darkShade50;
+      background-color: white;
+      display: flex;
+      flex-wrap: wrap;
+      box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+      max-width: 1440px;
+      min-width: 1440px;
+      margin-top: 40px;
+      // margin: 0px auto; для лэндинга
+
+      &-logo_and_discription{
+        margin-left: 140px;
+        margin-top: 100px;
+        height: min-content;
+        &-logo{
+          position: relative;
+        }
+        &-discription {
+          position: relative;
+          width: 270px;
+          margin-top: 10px;
+        }
+      }
+      &-nav {
+        position: relative;
+        margin-top: 92px;
+        display:flex;
+        justify-content: space-between;
+        width: 890px;
+        margin-bottom: 89px;
+        &-list{
+          @include fontH3;
+          color: $darkShade100;
+          padding: 0;
+          margin-left: 31px;
+          position: relative;
+          width: 300px;
+          
+          &-item {
+            @include fontBody;
+            list-style: none;
+            margin-top: 18px;
+            height: 20px;
+
+            &>a{
+              text-decoration: none;
+              color: $darkShade50;
+            }
+          }
+          form{
+            margin-top: 52px;
+            &>input{
+              @include input(260px);
+            }
+            &>button{
+              @include dropButton(212px);
+              color: $purple;
+            }
+          }
+        }
+      }
+      &-line {
+        position: relative;
+        border-top: 1px solid $darkShade25;
+        height: 70px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        &>span{
+          margin-left: 140px;
+        }
+        .icons{
+          display: flex;
+          margin-left: 700px;
+          .twitter{
+
+          }
+          .facebook{
+
+          }
+          .instagram{
+
+          }
+        }
+      }
+    }
+    .footer-square{
+      position: relative;
+      background-color: white;
+      margin-top: 40px;
+      height: 368px;
+      width: 770px;
+      box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &-logo{
+        margin-top: 25px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

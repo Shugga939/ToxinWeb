@@ -1,0 +1,127 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="stylesheet", href="HeadersAndFooters.scss")
+    link(rel="stylesheet", href="../../normalize.min.css")
+    title= "Headers & Footers"
+  body
+    .wrapper
+      .logo
+          img(src="../src/Logo.svg", alt="logo")
+      header.header
+        .header-logo
+          img(src="src/Logo.svg", alt="logo")
+        nav.header-nav
+          ul.header-nav-list
+            li.header-nav-list-item
+              a(href="").bold_font О нас
+            li.header-nav-list-item.arrow-down Услуги
+              ul.drop-list
+                li.drop-list-item
+                  a(href="") Обслуживание номера  
+                li.drop-list-item
+                  a(href="") Обед в номер
+                li.drop-list-item
+                  a(href="") Каршеринг
+            li.header-nav-list-item
+              a(href="") Вакансии
+            li.header-nav-list-item
+              a(href="") Новости
+            li.header-nav-list-item.arrow-down Соглашения
+              ul.drop-list
+                li.drop-list-item
+                  a(href="") Конфиденциальность
+                li.drop-list-item
+                  a(href="") Обработка данных
+                li.drop-list-item
+                  a(href="") Оплата
+        button.button-purple_frame.button_header_login ВОЙТИ
+        button.button-purple.button_header_registration  ЗАРЕГИСТРИРОВАТЬСЯ
+
+      header.header
+        .header-logo
+          img(src="src/Logo.svg", alt="logo")
+        nav.header-nav.header-nav-loginned
+          ul.header-nav-list
+            li.header-nav-list-item
+              a(href="").bold_font О нас
+            li.header-nav-list-item.arrow-down Услуги
+              ul.drop-list
+                li.drop-list-item
+                  a(href="") Обслуживание номера  
+                li.drop-list-item
+                  a(href="") Обед в номер
+                li.drop-list-item
+                  a(href="") Каршеринг
+            li.header-nav-list-item
+              a(href="") Вакансии
+            li.header-nav-list-item
+              a(href="") Новости
+            li.header-nav-list-item.arrow-down Соглашения
+              ul.drop-list
+                li.drop-list-item
+                  a(href="") Конфиденциальность
+                li.drop-list-item
+                  a(href="") Обработка данных
+                li.drop-list-item
+                  a(href="") Оплата
+        .header-username Юлий Цезарь
+      
+      footer.footer
+        .footer-logo_and_discription
+          .footer-logo_and_discription-logo
+            img(src="src/Logo.svg", alt="logo")
+          .footer-logo_and_discription-discription
+            | Бронирование номеров в лучшем отеле 2019 года 
+            | по версии ассоциации "Отельные взгляды"
+        .footer-nav
+          ul.footer-nav-list Навигация
+            li.footer-nav-list-item 
+              a(href="") О нас
+            li.footer-nav-list-item
+              a(href="") Новости
+            li.footer-nav-list-item
+              a(href="") Служба поддержки
+            li.footer-nav-list-item 
+              a(href="") Услуги
+          ul.footer-nav-list О нас
+            li.footer-nav-list-item
+              a(href="") О сервисе
+            li.footer-nav-list-item
+              a(href="") Наша команда
+            li.footer-nav-list-item
+              a(href="") Вакансии
+            li.footer-nav-list-item
+              a(href="") Инвесторы
+          ul.footer-nav-list Служба поддержки
+            li.footer-nav-list-item
+              a(href="") Соглашения
+            li.footer-nav-list-item
+              a(href="") Сообщества
+            li.footer-nav-list-item
+              a(href="") Связь с нами
+          ul.footer-nav-list Подписка
+            li.footer-nav-list-item Получайте специальные 
+                | предложения и новости сервиса
+            form(action="", method="post") 
+              input(type="email" placeholder="Email")
+              button(
+                  type = "submit" 
+              ).material-icons.footer-nav-email-confirm arrow_forward
+        .footer-line
+          span Copyright © 2018 Toxin отель. Все права защищены.
+          .icons
+            .twitter s 
+            .facebook aa
+            .instagram 2
+      .footer-square
+        .footer-square-logo
+          img(src="src/Logo.svg", alt="logo") 
+        span Copyright © 2018 Toxin отель. Все права защищены.
+        .icons
+            .twitter s 
+            .facebook aa
+            .instagram 2
