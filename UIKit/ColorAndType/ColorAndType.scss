@@ -2,35 +2,38 @@
 @import "../mixins";
 
 body{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 19px;
-    background-color: #FFFFFF;
-    width: 1440px;
-    height: 900px;    
+  font-family: 'Montserrat', sans-serif;
+  font-size: 19px;
+  background-color: #FFFFFF;
+  width: 1440px;
+  height: 900px;    
 }
+
 .wrapper{
-    background-color: #FFFFFF;
-    width: 1440px;
-    height: 900px;
-}
-.logo{
+  background-color: #FFFFFF;
+  width: 1440px;
+  height: 900px;
+
+  .logo{
     position: relative;
     width: 106px;
     height: 40px;
     padding: 30px;
-}
-.colors {
+  }
+
+  .colors-container {
     position: absolute;
     width: 260px;
     top: 145px;
     left: 150px;
-    &-square {
+    .colors{
+      &-square {
         width: 70px;
         height: 70px;
         border-radius: 6px;
         margin-bottom: 20px; 
-    }   
-    &-text {
+        }   
+      &-text {
         position: relative;
         width: 171px;
         top: 7px;
@@ -38,85 +41,79 @@ body{
         font-weight: bold;
         font-size: 19px;
         line-height: 28px;
+      }
+      &-number {
+        position: relative;
+        width: 171px;
+        top: 11px;
+        left: 110px;
+      }
     }
-    &-number {
-    position: relative;
-    width: 171px;
-    top: 11px;
-    left: 110px;
-    }
-}
-.fontDescription {
+  }
+  .fonts-container {
     position: absolute;
     width: 369px;
     top: 145px;
     left: 854px;
 
-}
-.fonts {
-    position: relative;
-    &-tagH1{
+      .font {
+      position: relative;
+
+      &-tagH1{
         position: absolute;
         right: 340px;
         font-size: 24px;
         color: $darkShade25;
-
-    }
-    &-textH1{
+      }
+      &-textH1{
+        @include fontH1;
         position: relative;
         left: 60px;
         top: 0;
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 29px;
         margin-bottom: 52px;
-
-    }
-    &-tagH2{
+      }
+      &-tagH2{
         right: 340px;
         position: absolute;
         font-size: 19px;
         color: $darkShade25;
-    }
-    &-textH2{
+      }
+      &-textH2{
+        @include fontH2;
         position: relative;
         left: 60px;
-        font-weight: bold;
-        font-size: 19px;
-        line-height: 24px;
         margin-bottom: 50px;
-    }
-    &-tagH3{
+      }
+      &-tagH3{
         position: absolute;
         right: 340px;
         font-size: 12px;
         color: $darkShade25;
-    }
-    &-textH3{
+      }
+      &-textH3{
+        @include fontH3;
         position: relative;
         left: 60px;
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: 12px;
-        line-height: 15px;
         margin-bottom: 47px;
-    }
-    &-tagBody{
+      }
+      &-tagBody{
         position: absolute;
         right: 340px;
         font-size: 14px;
         top: 3px;
         color: $darkShade25;
-    }
-    &-textBody{
+      }
+      &-textBody{
+        @include fontBody;
         position: relative;
         left: 60px;
         width: 312px;
-        font-size: 14px;
-        line-height: 24px;
         margin-bottom: 51px;
+      }
     }
+  }
 }
+
 a{
     position: relative;
     left: 900px;

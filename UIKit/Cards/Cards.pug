@@ -1,0 +1,95 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="stylesheet", href="Cards.scss")
+    link(rel="stylesheet", href="../../UIKit/js/jquery-ui/jquery-ui.css")
+    link(rel="stylesheet", href="../../normalize.min.css")
+    title= "Cards"
+  body
+    div.wrapper
+      .logo
+        img(src="../src/Logo.svg", alt="logo")
+      .column1
+        .find
+          form(action="#", method="post").find-container
+            .find-container-h1 Найдём номера под ваши пожелания  
+            .elementWithDates
+              .containerLeft
+                .description Прибытие
+                input(
+                type="text"
+                name="dateShort"
+                readonly = "true"
+                placeholder = "ДД.ММ.ГГГГ"
+                )
+                button(type="button").dropbuttonShort
+              .containerRight
+                .description Выезд
+                input(
+                type="text"
+                name="dateShort"
+                readonly = "true"
+                placeholder = "ДД.ММ.ГГГГ"
+                )
+                button(type="button").dropbuttonShort
+            .elementWithDrop
+              .description Гости
+              input(
+              type="text"
+              name="guests"
+              readonly = "true"
+              placeholder = "Сколько гостей"
+              )
+              button(type="button").dropbutton
+              .dropMenu
+                .item Взрослые
+                  button(type="button").minus.minus-unactive -
+                  span 0
+                  button(type="button").plus +
+                .item Дети
+                  button(type="button").minus.minus-unactive -
+                  span 0
+                  button(type="button").plus +
+                .item Младенцы
+                  button(type="button").minus.minus-unactive -
+                  span 0
+                  button(type="button").plus +
+                .buttons-container
+                  button(type="button").button-purple_text Очистить
+                  button(type="button").button-purple_text Применить
+            .button-container
+              button(type="submit").button-purple_long Подобрать номер
+        .registration
+          form(action="#", method="post").registration-container
+            .registration-container-h1 Регистрация аккаунта
+            .registration-container-fullName
+              input(type="text" placeholder="Имя" name="name")
+              input(type="text" placeholder="Фамилия" name="surname")
+            .registration-container-gender
+              .radiobutton-container
+                label.radiobutton
+                  input(type="radio" name="gender" checked='cheked')
+                  span Мужчина  
+              .radiobutton-container 
+                label.radiobutton
+                  input(type="radio" name="gender")
+                  span Женщина
+            .registration-container-dob
+              .registration-container-dob-description Дата рождения
+              input(type="text" name="DOB" placeholder = "ДД.ММ.ГГГГ")
+            .registration-container-data
+              .registration-container-data-description Данные для входа в сервис
+              input(type="email" name="Email" placeholder = "Email")
+              input(type="text" name="Password" placeholder = "Пароль")
+              .switch-container
+                label.switch
+                  input(type="checkbox", name='offer')
+                  span.slider
+                  .desc Получать спецпредложения
+              button(type="submit").button-purple_long Перейти к оплате
+            .registration-container-login
+              span Уже есть аккаунт на Toxin
+              a(href="#").button-purple_frame Войти

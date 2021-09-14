@@ -1,42 +1,41 @@
 mixin colors(color,text,colorNum)
-   -const c = {'background':color};
-    .colors-square(style=c)
-        .colors-text=text
-        .colors-number=colorNum
-
+  -const c = {'background':color};
+  .colors-square(style=c)
+    .colors-text=text
+    .colors-number=colorNum
 
 doctype html
 html(lang="ru")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        link(rel="stylesheet", href="ColorAndType.scss")
-        link(rel="stylesheet", href="../../normalize.min.css")
-        title= "Color & Type"
-    body
-        div.wrapper 
-            .logo
-                img(src="../src/Logo.svg", alt="logo")
-            .colors
-                +colors('#1F2041','Dark Shade 100%','#1F2041')
-                +colors('rgba(31, 32, 65, 0.75)','Dark Shade 75%','#1F2041')
-                +colors('rgba(31, 32, 65, 0.5)','Dark Shade 50%','#1F2041')
-                +colors('rgba(31, 32, 65, 0.25)','Dark Shade 25%','#1F2041')
-                +colors('rgba(31, 32, 65, 0.05)','Dark Shade 5%','#1F2041')
-                +colors('#BC9CFF','Purple ','#BC9CFF')
-                +colors('#6FCF97','Green','#6FCF97')
-            .fontDescription
-                .fonts
-                    .fonts-tagH1 H1
-                    .fonts-textH1 This one is the sub-section or widget title
-                .fonts
-                    .fonts-tagH2 H2
-                    .fonts-textH2 Next one is the item title inside widgets
-                .fonts
-                    .fonts-tagH3 H3
-                    .fonts-textH3 This is a label or CTA text
-                .fonts
-                    .fonts-tagBody Body
-                    .fonts-textBody This is the body text which is used for most of the design, like paragraphs, lists, etc.
-            a(href="../FormElements/FormElements.pug") FormElements-->
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="stylesheet", href="ColorAndType.scss")
+    link(rel="stylesheet", href="../../normalize.min.css")
+    title= "Color & Type"
+  body
+    div.wrapper 
+      .logo
+        img(src="../src/Logo.svg", alt="logo")
+      .colors-container
+        +colors('#1F2041','Dark Shade 100%','#1F2041')
+        +colors('rgba(31, 32, 65, 0.75)','Dark Shade 75%','#1F2041')
+        +colors('rgba(31, 32, 65, 0.5)','Dark Shade 50%','#1F2041')
+        +colors('rgba(31, 32, 65, 0.25)','Dark Shade 25%','#1F2041')
+        +colors('rgba(31, 32, 65, 0.05)','Dark Shade 5%','#1F2041')
+        +colors('#BC9CFF','Purple ','#BC9CFF')
+        +colors('#6FCF97','Green','#6FCF97')
+      .fonts-container
+        .font
+          .font-tagH1 H1
+          .font-textH1 This one is the sub-section or widget title
+        .font
+          .font-tagH2 H2
+          .font-textH2 Next one is the item title inside widgets
+        .font
+          .font-tagH3 H3
+          .font-textH3 This is a label or CTA text
+        .font
+          .font-tagBody Body
+          .font-textBody This is the body text which is used for most of the design, like paragraphs, lists, etc.
+      a(href="../FormElements/FormElements.pug") FormElements-->

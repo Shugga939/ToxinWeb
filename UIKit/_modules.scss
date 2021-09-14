@@ -4,48 +4,118 @@
     @include fontH3;
     background: $pinkGr;
     color: white;
-    height: 45px;
-    padding-left: 19px;
-    padding-right: 19px;
+    padding: 14.5px 19px;
     border-radius: 22px;
-    border-style: none;
-    font-size: 12px;
-    font-weight: 700;
+    border: none;
     cursor: pointer;
-    margin-right: 20px;
     &-clicked{
-        background: dimgrey;
+        background: dimgrey; //toDO
+    }
+    &:active{
+        background: dimgrey; //toDO
     }
 }
 
-.button-frame_purple {
+.button-purple_frame {
+    @include fontH3;
     position: relative;
-    background: $pinkGr;
-    height: 34px;
-    width: 50px;
-    border: 2px;
+    cursor: pointer;
+    padding: 12.5px 17px;
     border-radius: 22px;
-    margin-right: 20px;
+    background-color: white;
+    color: $purple;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
 
-    &::after {
+    &::before {
+        content: '';
         position: absolute;
-        top: 0;
-        left: 0;
         line-height: 0;
-        content: "ВОЙТИ";
-        background-color: white;
-        color: $purple;
-        font-size: 12px;
-        font-weight: 700;
-        border: none;
-        border-radius: 22px;
-        height: 30px;
-        padding-left: 19px;
-        padding-right: 19px;
-        margin: 2px 2px;
-        cursor: pointer;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        border-radius: 30px;
+        background: $pinkGr;
+        z-index: -1;
+
+    }
+    &-clicked{
+        &::before{
+            background: grey; //toDO
+        }
+    }
+    &:active{
+        &::before{
+            background: grey;//toDO
+        }
+
     }
 }
+.button-purple_text {
+    @include fontH3;
+    background: none;
+    color: $purple;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    &-clicked{
+        color: dimgrey; //toDO
+    }
+    &:active{
+        color: dimgrey; //toDO
+    }
+}
+.button-purple_long {
+    @include fontH3;
+    background: $pinkGr;
+    color: white;
+    text-align: center;
+    width: 320px;
+    padding: 14.5px 0px;
+    border-radius: 22px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+
+    &::before{
+        content: url(../src/arrow_white.svg);
+        position: absolute;
+        top: 25%;
+        right: 4%;
+
+    }
+}
+
+// .button-frame_purple {
+//     position: relative;
+//     background: $pinkGr;
+//     height: 34px;
+//     width: 100px;
+//     border: 2px;
+//     border-radius: 22px;
+//     margin-right: 20px;
+
+//     .button-frame_content {
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         line-height: 0;
+//         content: "";
+//         background-color: white;
+//         color: $purple;
+//         font-size: 12px;
+//         font-weight: 700;
+//         border: none;
+//         border-radius: 22px;
+//         height: 30px;
+//         padding-left: 19px;
+//         padding-right: 19px;
+//         margin: 2px 2px;
+//         cursor: pointer;
+//     }
+// }
 
 .switch{
     position: relative;
@@ -90,7 +160,7 @@
     }
     .desc{
         position: absolute;
-        bottom: 0px;
+        top: -2px;
         margin-left: 50px;
         width: 230px;
         
@@ -131,13 +201,23 @@
     &-background:hover{
         border-color: $purple;
     }
-    .description{
-        line-height:20px;
+    .name{
+        line-height:16px;
         position: absolute;
-        top: -5px;
-        width: 200px;
+        
+        width: 210px;
         margin-left: 30px;
 
+    }
+    .description{
+        position: relative;
+        @include fontBody;
+        line-height: 13px;
+        font-size: 12px;
+        margin-top: 8px;
+        margin-bottom: 0px;
+        margin-left: 29px;
+        width: 230px;
     }
 }
 
