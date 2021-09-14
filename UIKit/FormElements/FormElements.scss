@@ -266,46 +266,6 @@ body{
             }
           }
         }
-      // inputs
-      input[name='textField'],[name='date'],[name='guests'] {
-        @include input(320px);
-      }
-      input[name='textFieldHover'] {
-        @include input(320px);
-        border-color: $darkShade75;
-        &::placeholder{
-          color:$darkShade100;
-        }
-      }
-      input[name='dateShort'] {
-        @include input(150px);
-      }
-      input[name='dateFilter'],[name='subscrition'],[name='roomsdef'] {
-        @include input(265px);
-        margin-bottom: 20px;
-      }
-      input[name='rooms'] {
-        @include input(265px);
-        margin-bottom: 20px;
-        border-color: $darkShade75;
-      }
-      input[name='subscrition'] {
-        @include input(265px);
-        margin-bottom: 79px;
-      }
-      //dropbuttons for inputs
-      .dropbutton{
-        @include dropButton(273px);
-        background-image: url("../src/dropd.svg");
-      }
-      .dropbutton-short{
-        @include dropButton(103px);
-        background-image: url("../src/dropd.svg");
-      }
-      .dropbutton-middle{
-        @include dropButton(218px);
-        background-image: url("../src/dropd.svg");
-      } 
     }
     .column2 {
       position: relative;
@@ -367,9 +327,9 @@ body{
             width: 38px;
             border: 1px solid $darkShade25;
             border-radius: 9px;
-            background:url("../src/favorite.svg");
+            background:url("../src/favorite_border.svg");
             background-repeat: no-repeat;
-            background-position-x: 13%;
+            background-position-x: 18%;
             background-position-y: 50%;
             cursor: pointer;
             &>span{
@@ -383,7 +343,7 @@ body{
             border: 1px solid $purple;
             background:url("../src/favorite.svg");
             background-repeat: no-repeat;
-            background-position-x: 13%;
+            background-position-x: 18%;
             background-position-y: 50%;
             
             &>span{
@@ -765,9 +725,9 @@ body{
             width: 38px;
             border: 1px solid $darkShade25;
             border-radius: 9px;
-            background:url("../src/favorite.svg");
+            background:url("../src/favorite_border.svg");
             background-repeat: no-repeat;
-            background-position-x: 13%;
+            background-position-x: 18%;
             background-position-y: 50%;
             cursor: pointer;
 
@@ -782,7 +742,7 @@ body{
             border: 1px solid $purple;
             background:url("../src/favorite.svg");
             background-repeat: no-repeat;
-            background-position-x: 13%;
+            background-position-x: 18%;
             background-position-y: 50%;
             
             &>span{
