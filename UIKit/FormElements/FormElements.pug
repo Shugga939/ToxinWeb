@@ -1,0 +1,212 @@
+mixin checkBox(text)
+    .checkboxContainer 
+        label.checkbox 
+            input(type="checkbox") 
+            span.checkbox-background
+            span.description=text
+
+mixin checkBoxChecked(text)
+    .checkboxContainer 
+        label.checkbox 
+            input(type="checkbox" checked='checked') 
+            span.checkbox-background
+            span.description=text
+
+mixin advantage(name)
+    if name =='Комфорт'
+        -var desc = 'Шумопоглащающие стены'
+        -var picClass = 'picComfort'
+    if name == 'Удобство'
+        -var desc = 'Окно в каждой из спален'
+        -var picClass = 'picConvenience'
+    .advantage
+        div(class='' + picClass)
+        span.advantage-name= name
+        span.advantage-description= desc
+
+        //- .advantage
+        //-     .picConvenience
+        //-     span.advantage-name Удобство
+        //-     span.advantage-description Окно в каждой из спален
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="FormElements.scss")
+        link(rel="stylesheet", href="../../normalize.min.css")
+        script(src="../js/jquery.js" defer)
+        script(src="../js/jquery-ui.js" defer)
+        script(src="../js/js.js") 
+        title= "Color & Type"
+    body
+        div.wrapper 
+            .logo
+                img(src="../src/Logo.svg", alt="logo")
+            .column1
+                .element 
+                    .description Text field
+                    .status Default
+                    input(type="email" placeholder="Email" name="textField")
+                .element 
+                    .description Text field
+                    .status Hover / Focus
+                    input(type="text" placeholder="This is pretty awesome" name="textFieldHover")
+                .element 
+                    .description Dropdown
+                    input(
+                    type="text"
+                    name="guests"
+                    readonly = "true"
+                    placeholder = "Сколько гостей"
+                    )
+                    button.dropbutton
+                .element 
+                    .description Masked text field
+                    input(type="text" placeholder="ДД.ММ.ГГГГ" name="date")
+                .elementWithDates
+                    .description Date dropdown
+                    input(
+                    type="text"
+                    name="dateShort"
+                    readonly = "true"
+                    placeholder = "ДД.ММ.ГГГГ"
+                    )
+                    button.dropbuttonShort
+                    .containerRight
+                        .description Date dropdown
+                        input(
+                        type="text"
+                        name="dateShort"
+                        readonly = "true"
+                        placeholder = "19.08.2019"
+                        )
+                        button.dropbuttonShort
+                .element 
+                    .description Filter date dropdown
+                    input(
+                    type="text"
+                    name="dateFilter"
+                    readonly = "true"
+                    placeholder = "19 авг - 23 авг"
+                    )
+                    button.dropbuttonMiddle
+                .element 
+                    .description Subscription text field
+                    input(type="email" placeholder="Email" name="subscrition")
+                    button(type = "submit" ).material-icons.confirm arrow_forward
+                .elementWithDrop
+                    .description Dropdown
+                    .status Default
+                    input(
+                    type="text"
+                    name="rooms"
+                    readonly = "true"
+                    placeholder = "2 спальни, 2 кровати..."
+                    )
+                    button.dropbuttonMiddle
+                .elementWithDrop
+                    .description Dropdown
+                    .status Expanded
+                    input(
+                    type="text"
+                    name="rooms"
+                    readonly = "true"
+                    placeholder = "2 спальни, 2 кровати..."
+                    )
+                    button.dropbuttonMiddle
+                    .dropMenu
+                        .visitors Спальни
+                            button.minus -
+                            span 2
+                            button.plus +
+                        .visitors Кровати
+                            button.minus -
+                            span 2
+                            button.plus +
+                        .visitors Ванные комнаты
+                            button.minus.minus-unactive -
+                            span 0
+                            button.plus +
+                        .find-buttons
+                .checkboxes
+                    .checkboxList.checkboxList-wrapped Expandable checkbox list
+                    .checkboxList.checkboxList-deployed Expandable checkbox list
+                    .checkboxes-content 
+                        +checkBox('Завтрак')
+                        +checkBoxChecked('Письменный стол')
+                        +checkBoxChecked('Cтул для кормления')
+                        +checkBoxChecked('Кроватка')
+                        +checkBox('Телевизор')
+                        +checkBox('Шампунь') 
+                        +checkBox('Телевизор')
+                        +checkBox('Шампунь')
+                +advantage('Комфорт')
+                +advantage('Удобство')
+            .column2
+                .title Checkbox buttons
+                .checkboxes-content     
+                    +checkBox('Можно курить')
+                    +checkBoxChecked('Можно с питомцами')
+                    +checkBoxChecked('Можно пригласить гостей (до 10 человек)')
+                .title Radio buttons
+                    .radiobuttons
+                        .radiobuttons-container
+                            label.radiobutton
+                                input(type="radio", name="gender" checked='checked')
+                                span Мужчина
+                        .radiobuttons-container
+                            label.radiobutton
+                                input(type="radio", name="gender")
+                                span Женщина
+                .title Toggle
+                    .switch-main-container
+                        .switch-container
+                            label.switch 
+                                input(type="checkbox", name='offer' checked='checked')
+                                span.slider
+                                .desc Получать спецпредложения
+                        .switch-container
+                            label.switch 
+                                input(type="checkbox", name='offer2')
+                                span.slider
+                                .desc Получать спецпредложения
+                .title Like button
+                    .like-main-container
+                        .like-container
+                            .like
+                                span 2
+                        .like-container
+                            .like.like-disable
+                                span 12
+                .title Rate button
+                    .stars-main-container
+                        .stars-container 
+                            span.active
+                            span.active 
+                            span.active 
+                            span.active
+                            span.pasive
+                        .stars-container 
+                            span.active
+                            span.active 
+                            span.active 
+                            span.active
+                            span.active
+            .column3
+                .title Range slider
+                    .slider-container
+                        #slider
+                .title Buttons
+                    .buttons-container
+                        .buttons-container-pink
+                            button.button-purple Click me
+                            button.button-purple.button-purple-clicked Click me
+                        .buttons-container-pink
+                            .button-frame_purple 
+                                //- button.button-frame_content ВОЙТИ
+    
+                             
+    

@@ -1,17 +1,30 @@
 
+// @mixin purpleButton ($width){
+//     background: $pinkGr;
+//     color: white;
+//     height: 45px;
+//     padding-left: 19px;
+//     padding-right: 19px;
+//     border-radius: 22px;
+//     border-style: none;
+//     font-size: 12px;
+//     font-weight: 700;
+//     cursor: pointer;
+// }
+
 @mixin dropButton($left) {
     position: absolute;
     width: 44px;
     height: 40px;
     left: $left;
-    top: 30px;
     align-items: center;
     text-align: center;
     background-color: white;
     border: 0px;
     border-radius: 4px;
     cursor: pointer;
-    background-image: url("../src/img/dropd.svg");
+    margin-top: 1px;
+    margin-left: 1px;
     background-repeat: no-repeat;
     background-position: center;
     
@@ -23,18 +36,45 @@
 @mixin input ($wd){
     width: $wd;
     height: 44px;
-    border: 1px solid rgba(31, 32, 65, 0.5);
+    border: 1px solid rgba(31, 32, 65, 0.25);
     box-sizing: border-box;
     border-radius: 4px;
     background-color: white;
-    color: $darkTx;
+    color: $darkShade100;
     padding-left: 15px;
-    
     font-size: 14px;
     cursor: default;
     margin-left: -1px;
     margin-top: -1px;
         &:focus{
             outline: none;
-    }
+            border-color: $darkShade75;
+        }
+        &::placeholder{
+            color: $darkShade50;
+        }
+    
+}
+@mixin fontH1 (){
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+}
+@mixin fontH2 (){
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 24px;
+}
+@mixin fontH3 (){
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+}
+@mixin fontBody (){
+    color: $darkShade50;
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: none;
+    font-weight: normal;
 }

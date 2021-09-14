@@ -57,6 +57,7 @@ body{
     position: relative;
     &-tagH1{
         position: absolute;
+        right: 340px;
         font-size: 24px;
         color: $darkShade25;
 
@@ -68,10 +69,11 @@ body{
         font-weight: bold;
         font-size: 24px;
         line-height: 29px;
-        margin-bottom: 51px;
+        margin-bottom: 52px;
 
     }
     &-tagH2{
+        right: 340px;
         position: absolute;
         font-size: 19px;
         color: $darkShade25;
@@ -79,38 +81,44 @@ body{
     &-textH2{
         position: relative;
         left: 60px;
-        top: 0;
         font-weight: bold;
         font-size: 19px;
         line-height: 24px;
-        margin-bottom: 51px;
+        margin-bottom: 50px;
     }
     &-tagH3{
         position: absolute;
+        right: 340px;
         font-size: 12px;
         color: $darkShade25;
     }
     &-textH3{
         position: relative;
         left: 60px;
-        top: 0;
         text-transform: uppercase;
         font-weight: bold;
         font-size: 12px;
         line-height: 15px;
-        margin-bottom: 51px;
+        margin-bottom: 47px;
     }
     &-tagBody{
         position: absolute;
+        right: 340px;
         font-size: 14px;
-
+        top: 3px;
         color: $darkShade25;
     }
     &-textBody{
         position: relative;
         left: 60px;
+        width: 312px;
         font-size: 14px;
         line-height: 24px;
         margin-bottom: 51px;
     }
+}
+a{
+    position: relative;
+    left: 900px;
+    top: 500px;
 }

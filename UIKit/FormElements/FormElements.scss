@@ -1,0 +1,450 @@
+@import "../variables";
+@import "../mixins";
+@import "../modules";
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'),
+         local('MaterialIcons-Regular'),
+         url(../../node_modules/material-icons/iconfont/material-icons.woff) format('woff'),
+         url(../../node_modules/material-icons/iconfont/material-icons.woff2) format('woff2'),
+ }
+ 
+ .material-icons {
+   font-family: 'Material Icons';
+   font-weight: normal;
+   font-style: normal;
+   font-size: 24px;  /* Preferred icon size */
+   display: inline-block;
+   line-height: 1;
+   text-transform: none;
+   letter-spacing: normal;
+   word-wrap: normal;
+   white-space: nowrap;
+   direction: ltr;
+ 
+   /* Support for all WebKit browsers. */
+   -webkit-font-smoothing: antialiased;
+   /* Support for Safari and Chrome. */
+   text-rendering: optimizeLegibility;
+ 
+   /* Support for Firefox. */
+   -moz-osx-font-smoothing: grayscale;
+ 
+   /* Support for IE. */
+   font-feature-settings: 'liga';
+ }
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 19px;
+    background-color: #FFFFFF;
+    width: 1440px;
+    height: 900px;    
+}
+.wrapper{
+    background-color: #FFFFFF;
+    width: 1440px;
+    height: 900px;
+    display: flex;
+}
+.logo{
+    position: relative;
+    width: 50px;
+    height: 40px;
+    padding: 30px;
+}
+.column1 {
+    position: relative;
+    left: 32px;
+    top: 143px;
+    width: 320px;
+
+
+    .element {
+        margin-bottom: 22px;
+
+        .description{
+            @include fontH3;
+            position: relative;
+            width: 200px;
+            margin-bottom: 5px;
+            float: left;
+        }
+        .status{
+            position: relative;
+            color: $darkShade50;
+            font-size: 12px;
+            right: 0px;
+            bottom: 2px;
+            text-transform: uppercase;
+            text-align: right;
+        }
+        .confirm {
+            @include dropButton(218px);
+            color: $purple;
+            background-image: none;
+        }
+    }
+    .elementWithDates {
+        margin-top: 40px;
+        position: inherit;
+        margin-bottom: 40px;
+        .description{
+            @include fontH3;
+            position: relative;
+            width: 150px;
+            padding-bottom: 9px;
+        }
+        .containerRight{
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+    .elementWithDrop{
+        position: relative;
+        width: 265px;
+
+        .description{
+            @include fontH3;
+            position: relative;
+            width: 150px;
+            margin-bottom: 6px;
+            float: left;
+        }
+        .status{
+            position: relative;
+            color: $darkShade50;
+            font-size: 12px;
+            right: 0px;
+            top: 0px;
+            text-transform: uppercase;
+            text-align: right;
+        }
+        .dropMenu {
+            @include fontH3;
+            position: absolute;
+            width: 263px;
+            height: 117px;
+            left: -1px;
+            top: 62px;
+            background: #FFFFFF;
+            text-transform: uppercase;
+            border: 1px solid rgba(31, 32, 65, 0.5);
+            border-radius: 0px 0px 5px 5px ;
+            box-sizing: content-box;
+            box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+
+            .visitors {
+                position: relative;
+                padding-top: 13px;
+                padding-bottom: 9px;
+                padding-left: 13px;
+                
+                .minus {
+                    position: absolute;
+                    width: 30px;
+                    height: 30px;
+                    left: 165px;
+                    top: 7px;
+                    color: $darkShade25;
+                    border: 1px solid $darkShade25;
+                    box-sizing: border-box;
+                    border-radius: 22px;
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 22px;
+                    padding-bottom: 3px;
+                    background-color: #FFFFFF;
+                    cursor: pointer;
+                    padding-top: 3px;
+                        &-unactive{
+                            color: $darkShade05;
+                            border-color: $darkShade05;
+                            cursor: default;
+                    }
+                }
+            
+                :nth-child(even){
+                    position: absolute;
+                    left: 207px;
+                    cursor: default;
+                }
+            
+                .plus {
+                    position: absolute;
+                    width: 30px;
+                    height: 30px;
+                    left: 227px;
+                    top: 7px;
+                    color: $darkShade25;
+                    border: 1px solid $darkShade25;
+                    box-sizing: border-box;
+                    border-radius: 22px;
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 22px;
+                    padding-bottom: 3px;
+                    background-color: #FFFFFF;
+                    cursor: pointer;
+                    padding-top: 4px;
+                        &-unactive{
+                            color: $darkShade05;
+                            border-color: $darkShade05;
+                    }
+                }
+            }
+        }
+    }
+    .checkboxes {
+        position: relative;
+        width: 250px;
+        margin-top: 152px;
+        .checkboxList {
+            @include fontH3;
+
+            position: relative;
+            margin-top: 49px;
+            background-repeat: no-repeat;
+            background-position-y: 0%;
+            background-position:right;
+            cursor: pointer;
+            
+            &-wrapped {
+                background-image: url("../src/dropd.svg");
+            }
+            &-deployed {
+                background-image: url("../src/upd.svg");
+                margin-bottom: 18px;
+            }
+        }
+        &-content{
+            margin-bottom: 40px
+        }
+        .checkboxContainer{
+            color: $darkShade50;
+            @include fontBody;
+            margin-top: 6px;
+        }
+    }
+
+    .advantage {
+        @include fontBody;
+        position: relative;
+        width: 275px;
+        border-bottom: 1px solid $darkShade25;
+        margin-bottom: 28px;
+        .picComfort {
+            background-image: url("../src/insert_emoticon.svg");
+            position: relative;
+            height: 40px;
+            width: 40px;
+            left: 2px;
+        }
+        .picConvenience{
+            background-image: url("../src/location_city.svg");
+            position: relative;
+            height: 36px;
+            width: 36px;
+            left: 3px;
+            background-size: cover;
+        }
+        
+        &-name {
+            font-weight: bold;
+            position: absolute;
+            left: 56px;
+            bottom: 44px;
+        }
+        &-description{
+            color: $darkShade75;
+            position: relative;
+            left: 56px;
+            bottom: 20px;
+        }
+    }
+    // inputs
+    input[name='textField'],[name='date'],[name='guests'] {
+        @include input(320px);
+    }
+    
+    input[name='textFieldHover'] {
+        @include input(320px);
+        border-color: $darkShade75;
+        &::placeholder{
+            color:$darkShade100;
+        }
+    }
+    
+    input[name='dateShort'] {
+        @include input(150px);
+    }
+    
+    input[name='dateFilter'],[name='subscrition'],[name='rooms'] {
+        @include input(265px);
+        margin-bottom: 20px;
+    }
+    input[name='subscrition'] {
+        @include input(265px);
+        margin-bottom: 79px;
+    }
+    //dropbuttons
+    .dropbutton{
+        @include dropButton(273px);
+        background-image: url("../src/dropd.svg");
+    }
+    .dropbuttonShort{
+        @include dropButton(103px);
+        background-image: url("../src/dropd.svg");
+    }
+    .dropbuttonMiddle{
+        @include dropButton(218px);
+        background-image: url("../src/dropd.svg");
+    }
+    
+}
+
+.column2 {
+    position: relative;
+    left: 156px;
+    top: 143px;
+    width: 270px;
+
+    
+    .title{
+    position: relative;
+    @include fontH3;
+    margin-bottom: 18px;
+    }
+
+    .checkboxes-content {
+        margin-bottom: 53px;
+    }
+
+    .checkboxContainer{
+        @include fontBody;
+        margin-top: 6px;
+        margin-left: 2px;
+    }
+
+    .radiobuttons {
+        &-container {
+            @include fontBody;
+            position: relative;
+            width: 116px;
+            margin-top: 14px;
+            margin-left: 1px;
+            margin-bottom: 17px;
+            user-select: none;
+            display: inline-flex;
+
+        }
+    }
+    .switch-main-container {
+        margin-top: 15px;
+        margin-bottom: 37px;
+
+        .switch-container {
+            @include fontBody;
+            margin-bottom: 8px;
+            margin-right: 20px;
+            width: 300px;
+        }
+    }
+    .like-main-container{
+            display: flex;
+            justify-content: space-between;
+            width: 91px;
+            margin-bottom: 40px;
+        .like-container{
+            position: relative;
+            @include fontBody;
+            font-size: 11px;
+            margin-top: 16px;
+            margin-left: 1px;
+            .like {
+                position: relative;
+                height: 18px;
+                width: 38px;
+                border: 1px solid $darkShade25;
+                border-radius: 9px;
+                background:url("../src/favorite.svg");
+                background-repeat: no-repeat;
+                background-position-x: 13%;
+                background-position-y: 50%;
+                cursor: pointer;
+                &>span{
+                    position: absolute;
+                    line-height: 0px;
+                    top: 50%;
+                    left: 50%;
+                }
+            }
+            .like-disable {
+                border: 1px solid $purple;
+                background:url("../src/favorite.svg");
+                background-repeat: no-repeat;
+                background-position-x: 13%;
+                background-position-y: 50%;
+                
+                &>span{
+                    position: absolute;
+                    line-height: 0px;
+                    top: 50%;
+                    left: 50%;
+                }
+            }
+        }
+    }
+    .stars-main-container{
+        display: flex;
+        width: 280px;
+
+        .stars-container {
+            position: relative;
+            margin-top: 17px;
+            margin-left: 3px;
+            margin-right: 17px;
+
+            .active {
+                content: url("../src/star.svg");
+                height: 20px;
+                width: 20px;
+                margin-right: 4px;
+            }
+            .pasive {
+                content: url("../src/star_border.svg");
+                height: 20px;
+                width: 20px;
+                margin-right: 4px;
+            }
+        }
+    }
+}
+.column3 {
+    position: relative;
+    left: 280px;
+    top: 143px;
+    width: 270px;
+    height: 50px;
+
+
+    .title{
+        position: relative;
+        @include fontH3;
+        margin-bottom: 18px;
+    }
+    .slider-container {
+        height: 55px;
+    }
+    .buttons-container{
+        margin-top: 16px;
+        .buttons-container-pink{
+            margin-bottom: 16px;
+        }
+}
+}
+
