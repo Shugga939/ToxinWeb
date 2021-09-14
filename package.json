@@ -13,11 +13,10 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel public/index.pug --open" ,
+    "start": "parcel public/index.pug --open",
     "build": "parcel build public/index.pug --public-url ./"
   },
   "keywords": [],
   "author": "",
   "license": "ISC"
 }
-
