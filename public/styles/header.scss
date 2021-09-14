@@ -1,0 +1,118 @@
+@import 'variables';
+@import 'mixins';
+@import 'modules';
+
+.header {
+  position: relative;
+  margin-left: 0;
+  background-color: white;
+  display: flex;
+  flex-wrap: nowrap;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  height: 70px;
+  align-items: center;
+  justify-content: center ;
+  z-index: 1;
+  margin-left: 0;
+  margin-top: 0;
+ 
+  @media (max-width:1200px) {
+    .header-nav{
+      margin-left: 1vw;
+    }
+  }
+
+  // @media (max-width:992px) {
+ 
+  // }
+
+  // @media (max-width:767px) {
+  
+  // }
+
+  &-logo{
+    position: relative;
+    margin-left: 25px;
+    display: flex;
+  }
+  &-nav {
+    position: relative;
+    padding-right: 2px;
+    margin-left: 245px;
+    float: left;
+    &-loginned{
+      margin-left: 427px;
+    }
+    &-list{
+      position: relative;
+      display: flex;
+      list-style: none;
+
+      .bold_font{
+        font-weight: bold;
+        color: $darkShade75;
+      }
+
+      &-item {
+        margin-right: 20px;
+        margin-left: 0px;
+        white-space: nowrap;
+      
+        &>a{
+          text-decoration: none;
+          color: $darkShade50;
+        }
+      }
+      .arrow-down {
+        background-image: url(/images/dropd.svg);
+        background-repeat: no-repeat;
+        background-position: right;
+        padding-right: 18px;
+        margin-right: 26px;
+        cursor: default;
+        &:hover>.drop-list {
+          display: block;
+        }
+      }
+
+      .drop-list {
+        position: absolute;
+        width: 210px;
+        padding-left: 0px;
+        margin-top: 10px;
+        background-color: white;
+        box-sizing: content-box;
+        box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+        display: none;
+        &-item {
+          margin-right: 20px;
+          margin-left: 10px;
+          margin-top: 5px;
+          margin-bottom: 5px;
+          list-style: none;
+
+          &>a{
+            text-decoration: none;
+            color: $darkShade50;
+          }
+        }
+      }
+    }
+  }
+  .button_header_login{
+    padding: 8px 18px;
+    margin-right: 23px;
+    margin-left: 3px;
+    text-decoration: none;
+  }
+  .button_header_registration {
+    padding: 10px 19px;
+    margin-right: 30px;
+  }
+  &-username{
+    height: 30px;
+    border-left: 1px solid $darkShade25;
+    padding-left: 19px;
+    line-height: 33px;
+  }
+}

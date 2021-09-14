@@ -1,0 +1,75 @@
+@mixin dropButton($left) {
+  position: absolute;
+  width: 44px;
+  height: 40px;
+  left: $left;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  border: 0px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1px;
+  margin-left: 1px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &:hover{
+    background-color: hsl(0, 0%, 97%);
+  }
+  &:focus{
+    outline: none;
+    background-color: hsl(0, 0%, 97%);
+  }
+}
+
+@mixin input ($wd){
+    font-family: 'Montserrat', sans-serif;
+    width: $wd;
+    height: 44px;
+    border: 1px solid $darkShade25;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: white;
+    color: $darkShade75;
+    padding-left: 15px;
+    font-size: 14px;
+    cursor: default;
+    margin-left: -1px;
+    margin-top: -1px;
+        &:focus{
+            outline: none;
+            border-color: $darkShade50;
+        }
+        &:hover{
+            border-color:$darkShade50;
+          }
+        &::placeholder{
+            color: $darkShade25;
+        }
+    
+}
+@mixin fontH1 (){
+    color: $darkShade100;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+}
+@mixin fontH2 (){
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 24px;
+}
+@mixin fontH3 (){
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+}
+@mixin fontBody (){
+    color: $darkShade50;
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: none;
+    font-weight: normal;
+}

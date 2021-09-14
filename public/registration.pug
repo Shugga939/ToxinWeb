@@ -1,0 +1,37 @@
+extends /layout/base
+block variables
+    -var pageTitle= 'Регистрация'
+  
+block content
+  .wrapper_registrationPage
+    .registration
+      form(action="#", method="post").registration-container
+        .registration-container-h1 Регистрация аккаунта
+        .registration-container-fullName
+          input(type="text" placeholder="Имя" name="name")
+          input(type="text" placeholder="Фамилия" name="surname")
+        .registration-container-gender
+          .radiobutton-container
+            label.radiobutton
+              input(type="radio" name="gender" checked='cheked')
+              span Мужчина  
+          .radiobutton-container 
+            label.radiobutton
+              input(type="radio" name="gender")
+              span Женщина
+        .registration-container-dob
+          .registration-container-dob-description Дата рождения
+          input(type="date" name="DOB" placeholder = "ДД.ММ.ГГГГ")
+        .registration-container-data
+          .registration-container-data-description Данные для входа в сервис
+          input(type="email" name="Email" placeholder = "Email")
+          input(type="text" name="Password" placeholder = "Пароль")
+          .switch-container
+            label.switch
+              input(type="checkbox", name='offer')
+              span.slider
+              .desc Получать спецпредложения
+          button(type="submit").button-purple_long Перейти к оплате
+        .registration-container-login
+          span Уже есть аккаунт на Toxin
+          a(href="/signIn.pug").button-purple_frame Войти

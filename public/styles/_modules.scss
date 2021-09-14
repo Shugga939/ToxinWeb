@@ -1,5 +1,5 @@
-@import "../variables";
-
+@import "variables";
+@import "mixins";
 .button-purple {
   @include fontH3;
   background: $pinkGr;
@@ -8,6 +8,7 @@
   border-radius: 22px;
   border: none;
   cursor: pointer;
+  text-decoration: none;
   &-clicked{
     background: dimgrey; //toDO
   }
@@ -79,7 +80,7 @@
   z-index: 1;
 
   &::before{
-    content: url(../src/arrow_white.svg);
+    content: url(/images/arrow_white.svg);
     position: absolute;
     top: 30%;
     right: 4%;
@@ -189,7 +190,7 @@
   }
   
   input:checked + &-background {
-    background: url(../src/vector.svg) no-repeat;
+    background: url(/images/vector.svg) no-repeat;
     background-position: 50% 30%;
     border-color: $purple;
     background-color: white;
@@ -228,7 +229,9 @@
       height: 12px;
       border-radius: 100%;
       background: $pinkGr;
-      
+    }
+    &:checked + span {
+      color: $darkShade75;
     }
   }
 
@@ -236,6 +239,7 @@
     display: inline-flex;
     align-items: center;
     user-select: none;
+    
     &:before{   //border
       content: '';
       display: inline-block;
@@ -302,9 +306,9 @@
 
 //modificators for dropbuttons  
   .dropbutton_open{
-    background-image: url("../src/upd.svg");
+    background-image: url(/images/upd.svg);
   }
   
   .dropbutton_close{
-    background-image: url("../src/dropd.svg");
+    background-image: url(/images/dropd.svg);
   }

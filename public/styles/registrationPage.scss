@@ -1,0 +1,104 @@
+.wrapper_registrationPage {
+  position: relative;
+  background-position: center 100%;
+  max-width: 1920px;
+  display: flex;
+  height: 685px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .registration {
+    position: relative;
+    background: white;
+    width: 377px;
+    height: 645px;
+    margin-left: 32px;
+    margin: 20px auto;
+    
+    border-radius: 3px ;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+
+    &-container{
+      margin-left: 30px;
+      
+      &-h1{
+        @include fontH1;
+        position: relative;
+        display: inline-block;
+        margin: 40px 28px 22px 0px;
+      }
+      input {
+        @include input(320px);
+        margin-bottom: 10px;
+      }
+      &-fullName{
+        position: relative;
+      }
+      &-gender{
+        @include fontBody;
+        position: relative;
+        margin-top: -2px;
+        display: inline-flex;
+        .radiobutton-container {
+          position: relative;
+          margin-right: 20px;
+        }
+      }
+      &-dob {
+        input[type="date"]{
+          @include fontBody;
+          text-transform: uppercase;
+        &::-webkit-calendar-picker-indicator,
+        &::-webkit-inner-spin-button{
+          display: none;
+          -webkit-appearance: none;
+        }
+      }
+        
+        &-description{
+          @include fontH3;
+          color: $darkShade100;
+          position: relative;
+          margin-top: 17px;
+          margin-bottom: 6px;
+          float: left;
+        }
+      }
+      &-data {
+
+        &-description {
+          @include fontH3;
+          color: $darkShade100;
+          position: relative;
+          margin-top: 10px;
+          margin-bottom: 6px;
+          float: left;
+        }
+        .switch-container {
+          @include fontBody;
+          color: $darkShade75;
+          margin-bottom: 18px;
+          margin-right: 20px;
+          width: 300px;
+        }
+      }
+      &-login {
+        @include fontBody;
+        color: $darkShade100;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;
+        margin-top: 30px;
+        margin-right: 30px;
+        
+        .button-purple_frame {
+          padding: 12.5px 25px; //расширение кнопки, т.к. не дефолтная
+          margin-right: -1px;
+          margin-top: 2px;
+        }
+      }
+    }
+  }
+}

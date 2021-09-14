@@ -1,0 +1,29 @@
+header.header
+  a(href="index.pug").header-logo
+    img(src="/images/Logo.svg", alt="logo")
+  nav.header-nav
+    ul.header-nav-list
+      li.header-nav-list-item
+        a(href="roomDetails.pug").bold_font О нас
+      li.header-nav-list-item.arrow-down Услуги
+        ul.drop-list
+          li.drop-list-item
+            a(href="#") Обслуживание номера  
+          li.drop-list-item
+            a(href="#") Обед в номер
+          li.drop-list-item
+            a(href="#") Каршеринг
+      li.header-nav-list-item
+        a(href="#") Вакансии
+      li.header-nav-list-item
+        a(href="#") Новости
+      li.header-nav-list-item.arrow-down Соглашения
+        ul.drop-list
+          li.drop-list-item
+            a(href="#") Конфиденциальность
+          li.drop-list-item
+            a(href="#") Обработка данных
+          li.drop-list-item
+            a(href="#") Оплата
+  a(href="/signIn.pug").button-purple_frame.button_header_login Войти
+  a(href="/registration.pug").button-purple.button_header_registration Зарегистрироваться

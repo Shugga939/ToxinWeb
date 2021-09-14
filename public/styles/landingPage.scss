@@ -1,0 +1,193 @@
+.wrapper_landingPage {
+  position: relative;
+  background-position: center 100%;
+  max-width: 1920px;
+  display: flex;
+  height: 830px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(/images/mainBG.jpg);
+
+  .find{
+    position: absolute;
+    background: white;
+    width: 379px;
+    height: 374px;
+    margin-left: 140px;
+    margin-top: 70px;
+    border-radius: 3px ;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    color: $darkShade100;
+    
+      input{
+        &::placeholder{
+          color: $darkShade75;
+      }
+    }
+
+    &-container{
+      margin-left: 30px;
+      
+      &-h1{
+        @include fontH1;
+        display: inline-block;
+        position: relative;
+        margin: 40px 28px 22px 0px;
+      
+      }
+        
+      &-dates {
+        position: relative;
+        display: flex;
+        margin-bottom: 22px;
+        
+        .show_datepicker {
+          &:focus{
+            border-color: $darkShade25;  //чтобы фокус не скакал при клике на календарь
+          }
+        }
+        .containerLeft{
+          position: relative;
+          margin-right: 20px;
+
+          .description{
+            @include fontH3;
+            position: relative;
+            width: 150px;
+            padding-bottom: 6px;
+          }
+        }
+        
+        .containerRight{
+          position: relative;
+
+          .description{
+            @include fontH3;
+            position: relative;
+            width: 170px;
+            margin-bottom: 6px;
+          }
+        }
+      }
+      
+      &-guests{
+        position: relative;
+
+        .description{
+          @include fontH3;
+          position: relative;
+          margin-bottom: 6px;
+          float: left;
+          width: 200px;
+        }
+  
+        .dropMenu {
+          @include fontH3;
+          position: absolute;
+          width: 318px;
+          height: 157px;
+          left: -1px;
+          top: 61px;
+          background: #FFFFFF;
+          text-transform: uppercase;
+          border: 1px solid $darkShade50;
+          border-radius: 0px 0px 5px 5px ;
+          box-sizing: content-box;
+          box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+          display: none;
+          z-index: 100;
+
+            .dropMenu_show{
+              display: block;
+            }
+            .item {
+              position: relative;
+              padding-top: 13px;
+              padding-bottom: 9px;
+              padding-left: 13px;
+                
+              .minus {
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                left: 220px;
+                top: 7px;
+                color: $darkShade25;
+                border: 1px solid $darkShade25;
+                box-sizing: border-box;
+                border-radius: 22px;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 22px;
+                padding-bottom: 3px;
+                background-color: #FFFFFF;
+                cursor: pointer;
+                padding-top: 3px;
+                  &-unactive{
+                      color: $darkShade05;
+                      border-color: $darkShade05;
+                      cursor: default;
+                  }
+              }
+            
+              :nth-child(even){
+                position: absolute;
+                left: 263px;
+                cursor: default;
+              }
+            
+              .plus {
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                left: 282px;
+                top: 7px;
+                color: $darkShade25;
+                border: 1px solid $darkShade25;
+                box-sizing: border-box;
+                border-radius: 22px;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 22px;
+                padding-bottom: 3px;
+                background-color: #FFFFFF;
+                cursor: pointer;
+                padding-top: 4px;
+
+                &-unactive{
+                  color: $darkShade05;
+                  border-color: $darkShade05;
+                }
+              }
+            }
+            .buttons-container{
+              position: relative;
+              display: flex;
+              justify-content: space-between;
+              margin: 20px 10px;
+
+            .hide{
+              opacity: 0;
+              cursor: default;
+            }
+          }
+        }
+      }
+      .button-container {
+        margin: 30px 0px;
+      }
+    }
+  }
+  .sub {
+    position: absolute;
+    width: 297px;
+    height: 48px;
+    right: 130px;
+    top: 762px;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: right;
+    z-index: 1;
+    color: $darkShade75;
+  }
+}

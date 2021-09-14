@@ -1,0 +1,17 @@
+extends /layout/base
+block variables
+    -var pageTitle= 'Войти'
+  
+block content
+  .wrapper_signIn
+    .login
+      form(action="#", method="post").login-container
+        .login-container-h1 Войти
+        .login-container-data
+          input(type="email" name="Email" placeholder = "Email")
+          input(type="text" name="Password" placeholder = "Пароль")
+        .login-container-button
+          button(type="submit").button-purple_long Войти
+        .login-container-registration
+          span Нет аккаунта на Toxin?
+          a(href="/registration.pug").button-purple_frame Создать 

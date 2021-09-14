@@ -1,0 +1,24 @@
+extends /layout/base
+include /includes/mixins
+block variables
+    -var pageTitle= 'Смотреть номер'
+  
+block content
+  .wrapper_roomDetails
+    .photo_container
+      .photo_container-main_photo
+      .photo_container-right_photo
+        .second_photo
+        .third_photo
+    .discription_container
+      .advantage-container
+        h2 Сведения о номере
+        +advantage('Комфорт')
+        +advantage('Удобство')
+        +advantage('Уют')
+      .impressions
+        h2 Впечатления от номера
+      .reviews 
+        h2 Отзывы посетителей номера
+
+      

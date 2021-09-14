@@ -1,55 +1,60 @@
-extends ../layout/main
+extends /layout/base
 block variables
-    -var pageTitle= 'Забронировать номер'
+  -var pageTitle= 'Забронировать номер'
+  -var logoPng = '/images/logo-title.png'
 
 block content
-    .wrapper
-        div.find
-            h1 Найдём номера под ваши пожелания  
-            .find-arrival Прибытие<br>
-                input(
-                    type="text"
-                    name="date"
-                    id="startdate"
-                    readonly = "true"
-                    placeholder = "ДД.ММ.ГГГГ"
-                    )
-                button#butt
-            .find-departure Выезд <br>
-                input(
-                    type="text"
-                    name="date"
-                    id="enddate"
-                    readonly = "true"
-                    placeholder = "ДД.ММ.ГГГГ"
-                    )
-                button#butt2
-            .find-guests Гости
-                input(
-                    type="text"
-                    name="guests"
-                    readonly = "true"
-                    placeholder = "Сколько гостей"
-                    )
-                button#butt3
-            .find-guestsChoice
-                .visitors Взрослые
-                    button.minus(id = "adult-") -
-                    span#counterAdult 0
-                    button.plus(id = "adult+") +
-                .visitors Дети
-                    button.minus(id = "child-") -
-                    span#counterChild 0
-                    button.plus(id = "child+") +
-                .visitors Младенцы
-                    button.minus(id = "baby-") -
-                    span#counterBaby 0
-                    button.plus(id = "baby+") +
-                .find-buttons
-                    button#clearCounter Очистить
-                    button#confirmCounter Применить
-
-        .sub Лучшие номера для вашей работы, <br>отдыха и просто вдохновения
+  .wrapper_landingPage
+    .find
+      form(action="#", method="post").find-container
+        .find-container-h1 Найдём номера под ваши пожелания  
+        .find-container-dates
+          .containerLeft
+            .description Прибытие
+            input#arrival(
+            type="text"
+            name="dateShort"
+            readonly = "true"
+            placeholder = "ДД.ММ.ГГГГ"
+            )
+            button#button_arrival(type="button").dropbutton-short.dropbutton_close
+          .containerRight
+            .description Выезд
+            input#leaving(
+            type="text"
+            name="dateShort"
+            readonly = "true"
+            placeholder = "ДД.ММ.ГГГГ"
+            )
+            button#button_leaving(type="button").dropbutton-short.dropbutton_close
+        .find-container-guests
+          .description Гости
+          input#guests(
+          type="text"
+          name="guests"
+          readonly = "true"
+          placeholder = "Сколько гостей"
+          )
+          button#guests_button(type="button").dropbutton.dropbutton_close
+          .dropMenu#dropMenu1
+            .item(data-guests-type='adult') Взрослые
+              button(type="button").minus.minus-unactive -
+              span 0
+              button(type="button").plus +
+            .item(data-guests-type='children') Дети
+              button(type="button").minus.minus-unactive -
+              span 0
+              button(type="button").plus +
+            .item(data-guests-type='baby') Младенцы
+              button(type="button").minus.minus-unactive -
+              span 0
+              button(type="button").plus +
+            .buttons-container
+              button(type="button" data-guests-button='clear').button-purple_text Очистить
+              button(type="button" data-guests-button='confirm').button-purple_text Применить
+        .button-container
+          button(type="submit").button-purple_long Подобрать номер
+    .sub Лучшие номера для вашей работы, <br>отдыха и просто вдохновения
                 
             
         

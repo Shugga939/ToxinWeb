@@ -256,6 +256,15 @@ body{
             }
           }
           &-dob {
+            input[type="date"]{
+              @include fontBody;
+              text-transform: uppercase;
+            &::-webkit-calendar-picker-indicator,
+            &::-webkit-inner-spin-button{
+              display: none;
+              -webkit-appearance: none;
+            }
+          }
             
             &-description{
               @include fontH3;

@@ -1,0 +1,17 @@
+block variables
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="stylesheet", href='/main.scss')
+    title= pageTitle
+    link(rel="icon", href=logoPng)
+  body
+    .container
+      include /includes/header
+      block content
+      include /includes/footer
+      script(src="/main.js")

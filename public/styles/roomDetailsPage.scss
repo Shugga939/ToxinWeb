@@ -1,0 +1,107 @@
+.wrapper_roomDetails {
+  position: relative;
+  // background-position: center 100%;
+  max-width: 1920px;
+  display: flex;
+  flex-wrap: wrap;
+  // flex-direction: column;
+  // height: 685px;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+
+  h2{
+    @include fontH2;
+    color: $darkShade100;
+    margin-bottom: 24px;
+  }
+  .photo_container{
+    position: relative;
+    height: 485px;
+    width: 100%;
+    max-width: 1920px;
+    display: flex;
+    align-items: center;
+    &-main_photo{
+      position: relative;
+      background: url(/images/mainBG.jpg);
+      max-width: 980px;
+      width: 75%;
+      height: 100%;
+    }
+    &-right_photo{
+      position: relative;
+      max-width: 460px;
+      height: 100%;
+      width: 35%;
+    .second_photo{
+      position: relative;
+      background: url(/images/mainBG.jpg);
+      width: 100%;
+      height: 50%;
+    }
+    .third_photo{
+      position: relative;
+      background: url(/images/mainBG.jpg);
+      width: 100%;
+      height: 50%;
+    }
+  }
+  }
+  .discription_container{
+    position: relative;
+    display: flex;
+    margin-top: 55px;
+    margin-left: 140px;
+    width: 500px;
+    // flex-direction: column;
+    
+    .advantage-container{
+      position: relative;
+      margin-right: 100px;
+      .advantage {
+        @include fontBody;
+        position: relative;
+        width: 275px;
+        border-bottom: 1px solid $darkShade25;
+        margin-bottom: 28px;
+        .picComfort {
+          background-image: url("/images/insert_emoticon.svg");
+          position: relative;
+          height: 40px;
+          width: 40px;
+          margin-left: 4px;
+        }
+        .picConvenience{
+          background-image: url("/images/location_city.svg");
+          position: relative;
+          margin-top: -4px;
+          height: 38px;
+          width: 36px;
+          margin-left: 5px;
+          background-size: cover;
+        }
+        .picCosiness{
+          background-image: url("/images/location_city.svg");
+          position: relative;
+          margin-top: -4px;
+          height: 38px;
+          width: 36px;
+          margin-left: 5px;
+          background-size: cover;
+        }
+        &-name {
+          font-weight: bold;
+          position: absolute;
+          left: 56px;
+          bottom: 44px;
+        }
+        &-description{
+          color: $darkShade75;
+          position: relative;
+          left: 56px;
+          bottom: 20px;
+        }
+      }
+    }
+  }
+}

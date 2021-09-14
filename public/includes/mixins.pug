@@ -1,0 +1,99 @@
+//- block mixins
+//- checkboxes
+mixin checkbox(name)
+  .checkboxContainer
+    label.checkbox
+      input(type="checkbox")
+      span.checkbox-background
+      span.name=name
+
+mixin checkboxChecked(name)
+  .checkboxContainer
+      label.checkbox
+        input(type="checkbox" checked='checked')
+        span.checkbox-background
+        span.name=name
+
+mixin checkboxWithDesc(name, desc)
+  .checkboxContainer
+      label.checkbox
+        input(type="checkbox")
+        span.checkbox-background
+        span.name=name
+        .description=desc
+
+//- advantages room
+mixin advantage(name)
+  if name =='Комфорт'
+    -var desc = 'Шумопоглащающие стены'
+    -var picClass = 'picComfort'
+  if name == 'Удобство'
+    -var desc = 'Окно в каждой из спален'
+    -var picClass = 'picConvenience'
+  if name == 'Уют' 
+    -var desc = 'Номер оснащен камином'
+    -var picClass = 'picCosiness'
+  .advantage
+    div(class='' + picClass)
+    span.advantage-name= name
+    span.advantage-description= desc
+
+//- room cart 
+mixin roomCart(data)
+  .room-cart 
+    .room-cart-slick
+      if data.images=='4'
+        img(src=data.srcImg1, alt="photo1")
+        img(src=data.srcImg2, alt="photo2")
+        img(src=data.srcImg3, alt="photo3")
+        img(src=data.srcImg4, alt="photo4")
+      if data.images=='3'
+        img(src=data.srcImg1, alt="photo1")
+        img(src=data.srcImg2, alt="photo2")
+        img(src=data.srcImg3, alt="photo3")
+      if data.images=='2'
+        img(src=data.srcImg1, alt="photo1")
+        img(src=data.srcImg2, alt="photo2")
+      if data.images=='1'
+        img(src=data.srcImg1, alt="photo1")
+    .room-cart-number_and_price
+      .number № 
+        span=data.number
+        if data.luxe=='true'
+          span Люкс
+      .price=data.price+'₽'
+        span  в сутки
+    .room-cart-raiting
+      .room-cart-raiting-stars
+        if data.stars=='5'
+          span.active
+          span.active
+          span.active
+          span.active
+          span.active
+        if data.stars=='4'
+          span.active
+          span.active
+          span.active
+          span.active
+          span.pasive
+        if data.stars=='3'
+          span.active
+          span.active
+          span.active
+          span.pasive
+          span.pasive
+        if data.stars=='2'
+          span.active
+          span.active
+          span.pasive
+          span.pasive
+          span.pasive
+        if data.stars=='1'
+          span.active
+          span.pasive
+          span.pasive
+          span.pasive
+          span.pasive
+      .room-cart-raiting-reviews=data.reviews
+        span  Отзывов
