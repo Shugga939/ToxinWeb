@@ -42,13 +42,20 @@ body{
   font-size: 19px;
   background-color: #FFFFFF;
   width: 1440px;
-  height: 900px;    
+  height: 900px;
+  padding: 0;
+  margin: 0;
+
+  button,input{
+    font-family:inherit;
+  }
 
   .wrapper{
     background-color: #FFFFFF;
     width: 1440px;
     height: 900px;
     display: flex;
+    margin-left: -1px;
 
     .logo{
       position: relative;
@@ -395,7 +402,7 @@ body{
       }
       .range-slider-container{
         position: relative;
-        margin-bottom: 45px;
+        margin-bottom: 42px;
         
         input[class='slider-value'] {
           font-size: 12px;
@@ -541,7 +548,7 @@ body{
 
       .dropdown-first,.dropdown-second {
         position: relative;
-        margin-right: 70px;
+        margin-right: 72px;
         .element-inputWithDrop{
           position: relative;
           

@@ -31,7 +31,12 @@ body{
   font-family: 'Montserrat', sans-serif;
   @include fontBody;
   background-color: #FFFFFF;
+  padding: 0;
+  margin: 0;
 
+  button,input{
+    font-family:inherit;
+  }
   
   .wrapper{
     position: relative;
@@ -92,7 +97,7 @@ body{
             }
           }
           .arrow-down {
-            background-image: url(src/dropd.svg);
+            background-image: url(../src/dropd.svg);
             background-repeat: no-repeat;
             background-position: right;
             padding-right: 18px;
@@ -218,15 +223,23 @@ body{
         }
         .icons{
           display: flex;
-          margin-left: 700px;
+          margin-left: 677px;
           .twitter{
-
+            background: url(../src/twitter.svg);
+            width: 25px;
+            height: 20px;
           }
           .facebook{
-
+            background: url(../src/facebook.svg);
+            width: 22px;
+            height: 22px;
+            margin-left: 20px;
           }
           .instagram{
-
+            background: url(../src/instagram.svg);
+            width: 22px;
+            height: 22px;
+            margin-left: 22px;
           }
         }
       }
@@ -244,8 +257,28 @@ body{
       align-items: center;
 
       &-logo{
+        margin-bottom: 8px;
+      }
+      .icons{
+        display: flex;
         margin-top: 25px;
-        margin-bottom: 10px;
+        .twitter{
+          background: url(../src/twitter.svg);
+          width: 25px;
+          height: 20px;
+        }
+        .facebook{
+          background: url(../src/facebook.svg);
+          width: 22px;
+          height: 22px;
+          margin-left: 20px;
+        }
+        .instagram{
+          background: url(../src/instagram.svg);
+          width: 22px;
+          height: 22px;
+          margin-left: 22px;
+        }
       }
     }
   }

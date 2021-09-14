@@ -76,6 +76,7 @@
   border: none;
   cursor: pointer;
   position: relative;
+  z-index: 1;
 
   &::before{
     content: url(../src/arrow_white.svg);
@@ -254,20 +255,25 @@
     border-color: $purple;
   }
 }
+
 //inputs
-input[name='textField'],[name='date'],[name='guests'] {
+  input[name='textField'],[name='date'],[name='guests'] {
     @include input(320px);
   }
   input[name='textFieldHover'] {
     @include input(320px);
-    border-color: $darkShade75;
+    border-color: $darkShade50;
     &::placeholder{
-      color:$darkShade100;
+      color:$darkShade75;
     }
   }
   input[name='dateShort'] {
     @include input(150px);
+    &:focus, &:hover{
+      border-color: $darkShade50;
+    }
   }
+  
   input[name='dateFilter'],[name='subscrition'],[name='roomsdef'] {
     @include input(265px);
     margin-bottom: 20px;
@@ -281,16 +287,24 @@ input[name='textField'],[name='date'],[name='guests'] {
     @include input(265px);
     margin-bottom: 79px;
   }
-  //dropbuttons for inputs
+
+
+//dropbuttons for inputs
   .dropbutton{
     @include dropButton(273px);
-    background-image: url("../src/dropd.svg");
   }
   .dropbutton-short{
     @include dropButton(103px);
-    background-image: url("../src/dropd.svg");
   }
   .dropbutton-middle{
     @include dropButton(218px);
+  }
+
+//modificators for dropbuttons  
+  .dropbutton_open{
+    background-image: url("../src/upd.svg");
+  }
+  
+  .dropbutton_close{
     background-image: url("../src/dropd.svg");
-  } 
+  }

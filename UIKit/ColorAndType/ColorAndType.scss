@@ -6,26 +6,27 @@ body{
   font-size: 19px;
   background-color: #FFFFFF;
   width: 1440px;
-  height: 900px;    
+  height: 900px;
+  padding: 0;
+  margin: 0;    
 }
 
 .wrapper{
   background-color: #FFFFFF;
   width: 1440px;
   height: 900px;
-
+  display: flex;
   .logo{
     position: relative;
-    width: 106px;
-    height: 40px;
-    padding: 30px;
+    padding: 30px 30px;
   }
 
   .colors-container {
-    position: absolute;
-    width: 260px;
-    top: 145px;
-    left: 150px;
+    position: relative;
+    margin-left: 42px;
+    margin-top: 145px;
+    width: max-content;
+
     .colors{
       &-square {
         width: 70px;
@@ -51,10 +52,10 @@ body{
     }
   }
   .fonts-container {
-    position: absolute;
+    position: relative;
     width: 369px;
-    top: 145px;
-    left: 854px;
+    margin-top: 145px;
+    margin-left: 632px;
 
       .font {
       position: relative;

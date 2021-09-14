@@ -1,46 +1,37 @@
-
-// @mixin purpleButton ($width){
-//     background: $pinkGr;
-//     color: white;
-//     height: 45px;
-//     padding-left: 19px;
-//     padding-right: 19px;
-//     border-radius: 22px;
-//     border-style: none;
-//     font-size: 12px;
-//     font-weight: 700;
-//     cursor: pointer;
-// }
-
 @mixin dropButton($left) {
-    position: absolute;
-    width: 44px;
-    height: 40px;
-    left: $left;
-    align-items: center;
-    text-align: center;
-    background-color: white;
-    border: 0px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 1px;
-    margin-left: 1px;
-    background-repeat: no-repeat;
-    background-position: center;
-    
-        &:hover{
-        background-color: hsl(0, 0%, 97%);
-    }
+  position: absolute;
+  width: 44px;
+  height: 40px;
+  left: $left;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  border: 0px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1px;
+  margin-left: 1px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &:hover{
+    background-color: hsl(0, 0%, 97%);
+  }
+  &:focus{
+    outline: none;
+    background-color: hsl(0, 0%, 97%);
+  }
 }
 
 @mixin input ($wd){
+    font-family: 'Montserrat', sans-serif;
     width: $wd;
     height: 44px;
     border: 1px solid $darkShade25;
     box-sizing: border-box;
     border-radius: 4px;
     background-color: white;
-    color: $darkShade100;
+    color: $darkShade75;
     padding-left: 15px;
     font-size: 14px;
     cursor: default;
@@ -48,8 +39,11 @@
     margin-top: -1px;
         &:focus{
             outline: none;
-            border-color: $darkShade75;
+            border-color: $darkShade50;
         }
+        &:hover{
+            border-color:$darkShade50;
+          }
         &::placeholder{
             color: $darkShade50;
         }

@@ -10,6 +10,7 @@
        url('../../src/material-icons.woff2') format('woff2'),
 }
 
+
 .material-icons {
  font-family: 'Material Icons';
  font-weight: normal;
@@ -31,7 +32,13 @@ body{
   font-family: 'Montserrat', sans-serif;
   font-size: 19px;
   background-color: #FFFFFF;
+  padding: 0;
+  margin: 0;
 
+  button,input{
+    font-family:inherit;
+ 
+  }
   
   .wrapper{
     position: relative;
@@ -74,6 +81,11 @@ body{
             display: flex;
             margin-bottom: 22px;
             
+            .show_datepicker {
+              &:focus{
+                border-color: $darkShade25;  //чтобы фокус не скакал при клике на календарь
+              }
+            }
             .containerLeft{
               position: relative;
               margin-right: 20px;
@@ -118,11 +130,16 @@ body{
               top: 61px;
               background: #FFFFFF;
               text-transform: uppercase;
-              border: 1px solid $darkShade75;
+              border: 1px solid $darkShade50;
               border-radius: 0px 0px 5px 5px ;
               box-sizing: content-box;
               box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
               display: none;
+              z-index: 100;
+
+                .dropMenu_show{
+                  display: block;
+                }
                 .item {
                   position: relative;
                   padding-top: 13px;
@@ -197,7 +214,7 @@ body{
             }
           }
           .button-container {
-            margin: 30px -2px;
+            margin: 30px 0px;
           }
         }
       }
@@ -213,7 +230,7 @@ body{
         box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 
         &-container{
-          margin-left: 29px;
+          margin-left: 30px;
           
           &-h1{
             @include fontH1;
@@ -235,7 +252,7 @@ body{
             display: inline-flex;
             .radiobutton-container {
               position: relative;
-              margin-right: 17px;
+              margin-right: 20px;
             }
           }
           &-dob {
@@ -276,6 +293,8 @@ body{
             
             .button-purple_frame {
               padding: 12.5px 25px; //расширение кнопки, т.к. не дефолтная
+              margin-right: -1px;
+              margin-top: 2px;
             }
           }
         }
@@ -297,7 +316,7 @@ body{
         
         &-container{
           position: relative;
-          margin-left: 28px;
+          margin-left: 30px;
           margin-right: 28px;
           &-number_and_price{
             position: relative;
@@ -368,11 +387,13 @@ body{
               top: 61px;
               background: #FFFFFF;
               text-transform: uppercase;
-              border: 1px solid $darkShade75;
+              border: 1px solid $darkShade50;
               border-radius: 0px 0px 5px 5px ;
               box-sizing: content-box;
               box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
               display: none;
+              z-index: 100;
+
                 .item {
                   position: relative;
                   padding-top: 13px;
@@ -439,10 +460,10 @@ body{
                   justify-content: space-between;
                   margin: 20px 10px;
 
-                .hide{
-                  opacity: 0;
-                  cursor: default;
-                }
+                // .hide{
+                //   opacity: 0;
+                //   cursor: default;
+                // }
               }
             }
           }
@@ -476,7 +497,7 @@ body{
                   top: -15%;
                   left: 38%;
                   content: 'i';
-                  z-index: 1000;
+                  z-index: 2;
                 }
               }
               .count{
@@ -512,14 +533,14 @@ body{
         background: white;
         width: 377px;
         min-height: 355px;
-        margin-left: 42px;
+        margin-left: 44px;
         margin-top: 42px;
         border-radius: 3px ;
         box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
         
         &-container{
           position: relative;
-          margin-left: 29px;
+          margin-left: 31px;
           margin-right: 28px;
 
           &-h1{
@@ -558,7 +579,7 @@ body{
         margin-left: 41px;
         margin-top: 150px; 
         
-        .datepicker {
+        .datepicker-page {
           background: #fff;
           border: 1px solid #1F204140;
           box-shadow: 0px 10px 20px 0px #1F20410D;
@@ -805,7 +826,7 @@ body{
       .room-cart{
         position: relative;
         height: auto;
-        margin-top: 41px;
+        margin-top: 40px;
         width: 270px;
         margin-left: 41px;
         background-color: white;
@@ -814,7 +835,7 @@ body{
         &-slick{
           border-radius: 4px;
           position: relative;
-          margin-bottom: 3px;
+          margin-bottom: 4px;
           max-height: 152px;
         
           img {
@@ -892,7 +913,7 @@ body{
               font-weight: bold;
               font-size: 15px;
               position: absolute;
-              right: 20px;
+              right: 18px;
               
               &>span{
                 @include fontBody;

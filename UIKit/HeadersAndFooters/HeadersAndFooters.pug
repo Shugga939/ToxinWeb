@@ -5,15 +5,14 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     link(rel="stylesheet", href="HeadersAndFooters.scss")
-    link(rel="stylesheet", href="../../normalize.min.css")
     title= "Headers & Footers"
   body
     .wrapper
       .logo
-          img(src="../src/Logo.svg", alt="logo")
+          img(src="../src/logo_background.svg", alt="logo")
       header.header
         .header-logo
-          img(src="src/Logo.svg", alt="logo")
+          img(src="../src/Logo.svg", alt="logo")
         nav.header-nav
           ul.header-nav-list
             li.header-nav-list-item
@@ -43,7 +42,7 @@ html(lang="ru")
 
       header.header
         .header-logo
-          img(src="src/Logo.svg", alt="logo")
+          img(src="../src/Logo.svg", alt="logo")
         nav.header-nav.header-nav-loginned
           ul.header-nav-list
             li.header-nav-list-item
@@ -73,7 +72,7 @@ html(lang="ru")
       footer.footer
         .footer-logo_and_discription
           .footer-logo_and_discription-logo
-            img(src="src/Logo.svg", alt="logo")
+            img(src="../src/Logo.svg", alt="logo")
           .footer-logo_and_discription-discription
             | Бронирование номеров в лучшем отеле 2019 года 
             | по версии ассоциации "Отельные взгляды"
@@ -114,14 +113,14 @@ html(lang="ru")
         .footer-line
           span Copyright © 2018 Toxin отель. Все права защищены.
           .icons
-            .twitter s 
-            .facebook aa
-            .instagram 2
+            a(href="#").twitter 
+            a(href="#").facebook
+            a(href="#").instagram
       .footer-square
         .footer-square-logo
-          img(src="src/Logo.svg", alt="logo") 
+          img(src="../src/Logo.svg", alt="logo") 
         span Copyright © 2018 Toxin отель. Все права защищены.
         .icons
-            .twitter s 
-            .facebook aa
-            .instagram 2
+            a(href="#").twitter 
+            a(href="#").facebook
+            a(href="#").instagram
