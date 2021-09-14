@@ -1,31 +1,40 @@
+@media (max-width:1156px) {
+  .booking{
+    margin-top: 0px
+  }
+  .discription_container{
+    margin-top: 0px
+
+  }
+}
 .wrapper_roomDetails {
   position: relative;
-  // background-position: center 100%;
   max-width: 1920px;
   display: flex;
   flex-wrap: wrap;
-  // flex-direction: column;
-  // height: 685px;
-  // background-repeat: no-repeat;
-  // background-size: cover;
+  border-bottom: 1px solid $darkShade50;
+  justify-content: center;
 
   h2{
     @include fontH2;
     color: $darkShade100;
-    margin-bottom: 24px;
+    margin: 0;
+    
   }
+ 
   .photo_container{
     position: relative;
     height: 485px;
-    width: 100%;
-    max-width: 1920px;
+     width: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
+    margin: 0  auto;
     &-main_photo{
       position: relative;
-      background: url(/images/mainBG.jpg);
+      background-image: url(/images/roomDetailsPhoto1.png);
       max-width: 980px;
-      width: 75%;
+      width: 100%;
       height: 100%;
     }
     &-right_photo{
@@ -35,13 +44,13 @@
       width: 35%;
     .second_photo{
       position: relative;
-      background: url(/images/mainBG.jpg);
+      background-image: url(/images/roomDetailsPhoto2.png);
       width: 100%;
       height: 50%;
     }
     .third_photo{
       position: relative;
-      background: url(/images/mainBG.jpg);
+      background-image: url(/images/roomDetailsPhoto3.png);
       width: 100%;
       height: 50%;
     }
@@ -50,20 +59,20 @@
   .discription_container{
     position: relative;
     display: flex;
-    margin-top: 55px;
-    margin-left: 140px;
-    width: 500px;
-    // flex-direction: column;
+    flex-wrap: wrap;
+    margin: 70px 20px 73px 0px;
+    max-width: 710px;
     
     .advantage-container{
       position: relative;
-      margin-right: 100px;
+      margin-right: 86px;
       .advantage {
         @include fontBody;
+        color: $darkShade75;
         position: relative;
-        width: 275px;
+        min-width: 275px;
         border-bottom: 1px solid $darkShade25;
-        margin-bottom: 28px;
+        margin-top: 25px;
         .picComfort {
           background-image: url("/images/insert_emoticon.svg");
           position: relative;
@@ -74,7 +83,7 @@
         .picConvenience{
           background-image: url("/images/location_city.svg");
           position: relative;
-          margin-top: -4px;
+          margin-top: 0px;
           height: 38px;
           width: 36px;
           margin-left: 5px;
@@ -83,8 +92,8 @@
         .picCosiness{
           background-image: url("/images/location_city.svg");
           position: relative;
-          margin-top: -4px;
-          height: 38px;
+          margin-top: -5px;
+          height: 45px;
           width: 36px;
           margin-left: 5px;
           background-size: cover;
@@ -101,6 +110,362 @@
           left: 56px;
           bottom: 20px;
         }
+      }
+    }
+    .impressions{
+      // background: red;
+      width: 349px;
+      &>canvas{
+        // width: 100px;
+        // height: 100px;
+      }
+    }
+    .reviews {
+      margin-top: 10px;
+      &>h2{
+        margin: 0;
+        margin-bottom: 21px;
+      }
+      .comment-container {
+        position: relative;
+        display: flex;
+        height: max-content;
+        width: max-content;
+        margin-bottom: 24px;
+        .leftContainer {
+          .avatar {
+            border-radius: 100%;
+            width: 45px;
+            height: 45px;
+            overflow: hidden;
+            border: 2px solid white;
+            box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.3);
+            img {
+              margin: -11.5px -0px 0px -21.5px;
+            }
+          }
+          .like-container{
+            position: relative;
+            @include fontBody;
+            font-size: 11px;
+            margin-top: 10px;
+            margin-left: 5px;
+  
+            .like {
+              position: relative;
+              height: 18px;
+              width: 38px;
+              border: 1px solid $darkShade25;
+              border-radius: 9px;
+              background:url("/images/favorite_border.svg");
+              background-repeat: no-repeat;
+              background-position-x: 18%;
+              background-position-y: 50%;
+              cursor: pointer;
+  
+              &>span{
+                position: absolute;
+                line-height: 0px;
+                top: 50%;
+                left: 50%;
+              }
+            }
+            .like-clicked {
+              border: 1px solid $purple;
+              background:url("/images/favorite.svg");
+              background-repeat: no-repeat;
+              background-position-x: 18%;
+              background-position-y: 50%;
+              
+              &>span{
+                position: absolute;
+                color: $purple;
+                line-height: 0px;
+                top: 50%;
+                left: 50%;
+              }
+            }
+          }    
+        }       
+        .rightContainer {
+          margin-left: 11px;
+          width: 650px;
+  
+          .name {
+            @include fontBody;
+            font-weight: bold;
+            color: $darkShade100;
+          }
+          .time {
+            @include fontBody;
+            margin-bottom: 10px;
+            color: $darkShade75;
+          }
+          .comment {
+            @include fontBody;
+            color: $darkShade75;
+          }
+        }
+      }
+    }
+    .rules{
+      color: $darkShade75;
+      margin-top: 10px;
+      margin-right: 110px;
+      max-width: 250px;
+
+      &>h2{
+        margin: 0 20px;
+      }
+      .bullet-list {
+        position: relative;
+        margin: 0;
+        margin-top: 15px;
+        padding: 0;
+
+        &-item {
+          margin-left: 21px;
+          margin-top: 10px;
+          list-style-image: url('/images/Ellipse.svg');
+        }
+      }
+    }
+    .cancel{
+      color: $darkShade75;
+      max-width: 47%;
+      margin-top: 10px;
+
+      &>h2{
+        margin: 0 ;
+      }
+      .text {
+        margin-top: 15px;
+      }
+    }
+  }
+  .booking {
+    @include fontBody;
+    color: $darkShade100;
+    position: relative;
+    background: white;
+    width: 377px;
+    max-height: 510px;
+    margin-left: 50px;
+    margin-top: 70px;
+    border-radius: 3px ;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.2);
+    
+    &-container{
+      position: relative;
+      margin-left: 30px;
+      margin-right: 28px;
+      &-number_and_price{
+        position: relative;
+        margin-top: 43px;
+        display: inline-flex;
+        justify-content: space-between;
+        .number{
+          font-weight: bold;
+          position: relative;
+          &>span{
+            font-size: 1.5rem;
+            
+          }
+          &>span+span{
+            font-size: 0.8rem;
+            color: $purple;
+            text-transform: uppercase;
+          }
+        }
+        .price{
+          color: $darkShade50;
+          position: absolute;
+          width: 100px;
+          top: 4px;
+          left: 220px;
+          font-weight: bold;
+
+          &>span{
+            font-weight: normal;
+            font-size: 12px;
+          }
+        }
+      }
+      &-dates{
+        position: relative;
+        margin-top: 20px;
+        margin-bottom: 20px;
+          
+        .description{
+          @include fontH3;
+          position: relative;
+          width: 100px;
+          padding-bottom: 6px;
+        }
+        .containerRight{
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+      }
+      &-guests{
+        display: inline-block;
+        position: relative;
+        
+        .description{
+          @include fontH3;
+          position: relative;
+          width: 200px;
+          margin-bottom: 5px;
+          float: left;
+        }
+        .dropMenu {
+          @include fontH3;
+          position: absolute;
+          width: 318px;
+          height: 157px;
+          left: -1px;
+          top: 61px;
+          background: #FFFFFF;
+          text-transform: uppercase;
+          border: 1px solid $darkShade50;
+          border-radius: 0px 0px 5px 5px ;
+          box-sizing: content-box;
+          box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+          display: none;
+          z-index: 100;
+
+            .item {
+              position: relative;
+              padding-top: 13px;
+              padding-bottom: 9px;
+              padding-left: 13px;
+                
+              .minus {
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                left: 220px;
+                top: 7px;
+                color: $darkShade25;
+                border: 1px solid $darkShade25;
+                box-sizing: border-box;
+                border-radius: 22px;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 22px;
+                padding-bottom: 3px;
+                background-color: #FFFFFF;
+                cursor: pointer;
+                padding-top: 3px;
+                  &-unactive{
+                      color: $darkShade05;
+                      border-color: $darkShade05;
+                      cursor: default;
+                  }
+              }
+            
+              :nth-child(even){
+                position: absolute;
+                left: 263px;
+                cursor: default;
+              }
+            
+              .plus {
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                left: 282px;
+                top: 7px;
+                color: $darkShade25;
+                border: 1px solid $darkShade25;
+                box-sizing: border-box;
+                border-radius: 22px;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 22px;
+                padding-bottom: 3px;
+                background-color: #FFFFFF;
+                cursor: pointer;
+                padding-top: 4px;
+
+                &-unactive{
+                  color: $darkShade05;
+                  border-color: $darkShade05;
+                }
+              }
+            }
+            .buttons-container{
+              position: relative;
+              display: flex;
+              justify-content: space-between;
+              margin: 20px 10px;
+
+            // .hide{
+            //   opacity: 0;
+            //   cursor: default;
+            // }
+          }
+        }
+      }
+      &-pay_detail{
+        position: relative;
+        margin-top: 18px;
+        display: inline-block;
+        
+        width: 325px;
+      
+        .sum_for_days, .services, .additional_services {
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 10px;
+          .info{
+            width: 220px;
+          }
+          .reference{
+            width: 18px;
+            height: 18px;
+            position: relative;
+            margin-top: 1px;
+            margin-right: 20px;
+            border-radius: 100%;
+            border: 1px $darkShade25 solid;
+
+            &::before{
+              position: relative;
+              font-size: 0.8rem;
+              color: $darkShade25;
+              font-weight: bold;
+              top: -14%;
+              left: 38%;
+              content: 'i';
+              z-index: 2;
+            }
+          }
+          .count{
+            width: 57px;
+            margin-right: 5px;
+            text-align: right;
+          }
+        }
+      }
+      &-total{
+        @include fontH2;
+        position: relative;
+        margin-top: 11px;
+        display: flex;
+        width: 328px;
+
+        .dots{
+          font-size: 12px;
+          font-weight: normal;
+          line-height: 30px;
+        }
+      }
+      &-button{
+        margin-top: 15px;
+        padding-bottom: 25px;
       }
     }
   }

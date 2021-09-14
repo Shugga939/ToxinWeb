@@ -3,6 +3,7 @@ window.$ = require('jquery')
 window.jQuery = require('jquery')
 import '/plugins/datepicker/datepicker'
 import '/plugins/slick/slick'
+import '/plugins/chartJs/dist/chart'
 
 $(document).ready(function(){
   //------datepicker's logic------//
@@ -214,6 +215,44 @@ $(document).ready(function(){
     accessibility: true,
   });
 
+  const ratingCanavas = document.getElementById('rating');
+  const ratingData = {
+    labels: [
+      'Великолепно',
+      'Хорошо',
+      'Удовлетворительно',
+      'Разочарован'
+    ],
+    datasets: [
+      {
+        data: [180, 90, 90, 0],
+        backgroundColor : ['blue', 'red', 'green', 'grey'],
+        borderWidth: 2
+      }
+    ]
+  }
+  const ratingOption = {
+    rotation: 180,
+    percentageInnerCutout: 50 ,
+    // cutoutPercentage: 10,
+    // circumference: Math.PI,
+    legend :{
+      display: false,
+      position: 'bottom',
+      labels:{
+        boxWidth: 100,
+        fontColor: 'black'
+      }
+    },
+    animation: {
+      animateRotate: false
+    }
+  }
+  var pieChart = new Chart (ratingCanavas, {
+    type: 'doughnut',
+    data: ratingData,
+    options: ratingOption
+  })
 })
 
 

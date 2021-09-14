@@ -38,6 +38,21 @@ mixin advantage(name)
     span.advantage-name= name
     span.advantage-description= desc
 
+mixin comment(avatar,like_count, licked, name, time, text)
+  if licked == true
+      -var likeClass = 'like-clicked'
+  .comment-container
+    .leftContainer
+      .avatar
+        img(src=avatar, alt="photo")
+      .like-container
+        .like(class='' + likeClass)
+          span=like_count
+    .rightContainer
+      .name=name
+      .time=time
+      .comment=text
+
 //- room cart 
 mixin roomCart(data)
   .room-cart 

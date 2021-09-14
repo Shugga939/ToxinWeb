@@ -18,7 +18,95 @@ block content
         +advantage('Уют')
       .impressions
         h2 Впечатления от номера
+        canvas(width = '100')#rating
       .reviews 
         h2 Отзывы посетителей номера
-
-      
+        +comment('/images/avatar.png','12', true, 'Мурад Сарофанов', '5 дней назад', 
+        'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. ' +
+        'И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару - никто не жаловался из соседей.'
+        )
+        +comment('/images/avatar.png','2', false, 'Патрисия Стеклышкова', 'Неделю назад', 
+        'Обслуживание на высоте! Все аккуратно, чисто. Завтраки в номер советую заказать, ' +
+        'каждый день новое блюдо и десерт как комплимент.'
+        )
+      .rules 
+        h2 Правила
+        ul.bullet-list 
+          li.bullet-list-item Нельзя с питомцами
+          li.bullet-list-item Без вечеринок и мероприятий
+          li.bullet-list-item Время прибытия - после 13:00, а выезд до 12:00
+      .cancel 
+        h2 Отмена
+        .text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 
+         | 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+    .booking
+        form(action="#", method="post").booking-container
+          .booking-container-number_and_price
+            .number №   
+              span 888
+              span Люкс
+            .price 9 990₽ 
+              span в сутки
+          .booking-container-dates
+            .containerLeft
+              .description Прибытие
+              input(
+              type="text"
+              name="dateShort"
+              readonly = "true"
+              placeholder = "19.08.2019"
+              )
+              button(type="button").dropbutton-short.dropbutton_close
+            .containerRight
+              .description Выезд
+              input(
+              type="text"
+              name="dateShort"
+              readonly = "true"
+              placeholder = "23.08.2019"
+              )
+              button(type="button").dropbutton-short.dropbutton_close
+          .booking-container-guests
+            .description Гости
+            input(
+            type="text"
+            name="guests"
+            readonly = "true"
+            placeholder = "3 гостя"
+            )
+            button(type="button").dropbutton.dropbutton_close
+            .dropMenu
+              .item Взрослые
+                button(type="button").minus.minus-unactive -
+                span 0
+                button(type="button").plus +
+              .item Дети
+                button(type="button").minus.minus-unactive -
+                span 0
+                button(type="button").plus +
+              .item Младенцы
+                button(type="button").minus.minus-unactive -
+                span 0
+                button(type="button").plus +
+              .buttons-container
+                button(type="button").button-purple_text Очистить
+                button(type="button").button-purple_text Применить
+          .booking-container-pay_detail
+            .sum_for_days 
+              .info 9 990₽ x 4 суток
+              .count 39 960₽ 
+            .services
+              .info Сбор за услуги: скидка 2 179₽
+              div(title='Ваша личная скидка').reference 
+              .count 0₽
+            .additional_services
+              .info Сбор за дополнительные услуги
+              div(title='Залог').reference 
+              .count 300₽
+          .booking-container-total
+            .text Итого 
+            .dots ......................................
+              |.....................................
+            .count 38 081₽
+          .booking-container-button
+            button(type="submit").button-purple_long Забронировать
