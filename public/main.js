@@ -1,97 +1,15 @@
 'use strict'
 window.$ = require('jquery')
 window.jQuery = require('jquery')
-import '/plugins/datepicker/datepicker'
 import '/plugins/slick/slick'
 import '/plugins/chartJs/dist/chart'
+import '/styles/jquery-ui/jquery-ui'
+import '/plugins/datepicker/datepicker'
+import {initDatePicker} from '/js/datepickerLogic'
 
 $(document).ready(function(){
-  //------datepicker's logic------//
-{
-  var datepicker = $('#arrival').datepicker().data('datepicker');
-  //inputs
-  var firstdate = $('#arrival');
-  var lastdate = $('#leaving');
-  //buttons for inputs
-  var firstdate_button = $("#button_arrival");
-  var lastdate_button = $("#button_leaving");
-
-  firstdate.datepicker({
-    range: true,
-    todayButton: true,
-    clearButton: true,
-    minDate: new Date(),
-    toggleSelected: true,
-    
-    onSelect: function(fd){
-      firstdate.val(fd.split(",")[0]);
-      lastdate.val(fd.split(",")[1]);
-    }
-
-  })
-
-  firstdate.on('click', function(){
-    firstdate_button.trigger('click');
-    
-  })
-  lastdate.on('click', function(){
-    lastdate_button.trigger('click');
-  })
-
-  firstdate_button.on('click', function (){
-    if(firstdate.hasClass('show_datepicker')) {
-      datepicker.hide();
-      lastdate_button.attr('disabled',false)
-      lastdate.attr('disabled',false)
-      firstdate.toggleClass('show_datepicker');
-      $(this).removeClass('dropbutton_open')
-      $(this).addClass('dropbutton_close')
-    } else {
-      datepicker.show();
-      lastdate_button.attr('disabled',true)
-      lastdate.attr('disabled',true)
-      firstdate.toggleClass('show_datepicker');
-      $(this).addClass('dropbutton_open')
-      $(this).removeClass('dropbutton_close')
-    }
-  })
-
-  lastdate_button.on('click', function (){
-    if(lastdate.hasClass('show_datepicker')) {
-      datepicker.hide();
-      firstdate_button.attr('disabled',false)
-      firstdate.attr('disabled',false)
-      lastdate.toggleClass('show_datepicker');
-      $(this).removeClass('dropbutton_open')
-      $(this).addClass('dropbutton_close')
-    } else {
-      datepicker.show();
-      firstdate_button.attr('disabled',true)
-      firstdate.attr('disabled',true)
-      lastdate.toggleClass('show_datepicker');
-      $(this).addClass('dropbutton_open')
-      $(this).removeClass('dropbutton_close')
-    }
-  })
-  //button 'apply'
-  $('span[data-action="today"]').on('click',function(){
-    if(firstdate_button.hasClass('dropbutton_open')) {
-      firstdate_button.removeClass('dropbutton_open')
-      firstdate_button.addClass('dropbutton_close')
-      firstdate.removeClass('show_datepicker');
-      lastdate_button.attr('disabled',false)
-      lastdate.attr('disabled',false)
-    }
-    if(lastdate_button.hasClass('dropbutton_open')) {
-      lastdate_button.removeClass('dropbutton_open')
-      lastdate_button.addClass('dropbutton_close')
-      lastdate.removeClass('show_datepicker');
-      firstdate_button.attr('disabled',false)
-      firstdate.attr('disabled',false)
-    }
-  })
-}
-//----drop menu's logic---//
+  
+  initDatePicker();
 {
   var guests = $('#guests');
   var guests_button = $('#guests_button');
@@ -215,44 +133,73 @@ $(document).ready(function(){
     accessibility: true,
   });
 
+{
   const ratingCanavas = document.getElementById('rating');
+  if (ratingCanavas) {
+  const gradientOrange = ratingCanavas.getContext('2d').createLinearGradient(0, 0, 0, 100);
+  const gradientPurple = ratingCanavas.getContext('2d').createLinearGradient(0, 0, 0, 100);
+  const gradientGreen = ratingCanavas.getContext('2d').createLinearGradient(0, 0, 0, 100);
+
+  gradientOrange.addColorStop(0, '#FFE39C');
+  gradientOrange.addColorStop(1, '#FFBA9C ');
+
+  gradientPurple.addColorStop(0, '#BC9CFF');
+  gradientPurple.addColorStop(1, '#8BA4F9');
+
+  gradientGreen.addColorStop(0, ' #6FCF99');
+  gradientGreen.addColorStop(1, '#6BD0BE');
+  
   const ratingData = {
     labels: [
-      'Великолепно',
-      'Хорошо',
-      'Удовлетворительно',
-      'Разочарован'
+      ' Великолепно',
+      ' Хорошо',
+      ' Удовлетворительно',
+      ' Разочарован'
     ],
     datasets: [
       {
-        data: [180, 90, 90, 0],
-        backgroundColor : ['blue', 'red', 'green', 'grey'],
+        data: [130, 65, 65, 0],
+        backgroundColor : [gradientOrange, gradientPurple, gradientGreen],
         borderWidth: 2
       }
     ]
   }
   const ratingOption = {
     rotation: 180,
-    percentageInnerCutout: 50 ,
-    // cutoutPercentage: 10,
-    // circumference: Math.PI,
-    legend :{
-      display: false,
-      position: 'bottom',
-      labels:{
-        boxWidth: 100,
-        fontColor: 'black'
+    cutout: 55,
+    
+    plugins: {
+      legend: {
+        display: false,
       }
     },
-    animation: {
-      animateRotate: false
-    }
+    maintainAspectRatio: false,
+    cutoutPercentage: 90,
   }
-  var pieChart = new Chart (ratingCanavas, {
+   new Chart (ratingCanavas, {
     type: 'doughnut',
     data: ratingData,
     options: ratingOption
   })
+}
+}
+  
+  $('.range-slider').slider({
+    range: true,
+    min: 500,
+    max: 15500,
+    values: ['5000','10000'],
+    slide: function(event,ui){
+        let val1 = ui.values[0]+'';
+        let val2 = +ui.values[1]+'';
+        if (val1>10000) val1 = val1.substring(0,2) + ' ' + val1.substring(2)
+        if (val1>1000) val1 = val1.substring(0,1) + ' ' + val1.substring(1);
+        if (val2>10000) val2 = val2.substring(0,2) + ' ' + val2.substring(2)
+        if (val2>1000) val2 = val2.substring(0,1) + ' ' + val2.substring(1);
+        $('.slider-value').val(val1 + 'P - ' + val2 + 'P');
+    }
+})
+$('.guests').on('click',function(){alert('00')})
 })
 
 

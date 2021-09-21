@@ -36,6 +36,32 @@
       }
     }
   }
+  @media (max-width:992px) {
+    .footer-logo_and_discription{
+      display: none;
+    }
+    .footer-nav{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-bottom: 0px;
+
+      &-list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+      }
+    }
+    .footer-line{
+      &>span{
+        white-space: nowrap;
+      }
+      .icons{
+        margin-left: 2%;
+      }
+    }
+  }
 
   &-logo_and_discription{
     position: relative;
@@ -83,7 +109,7 @@
           @include input(260px);
         }
         &>button{
-          @include dropButton(212px);
+          @include dropButton(216px);
           color: $purple;
         }
       }

@@ -90,7 +90,7 @@
           background-size: cover;
         }
         .picCosiness{
-          background-image: url("/images/location_city.svg");
+          background-image: url("/images/whatshot.svg");
           position: relative;
           margin-top: -5px;
           height: 45px;
@@ -113,18 +113,108 @@
       }
     }
     .impressions{
-      // background: red;
       width: 349px;
-      &>canvas{
-        // width: 100px;
-        // height: 100px;
+      
+      .diagram-container{
+        position: relative;
+        display: flex;
+        width: 320px;
+        height: 275px;
+        margin-top: 20px;
+        padding: 0;
+        
+        .diagram {
+          position: relative;
+          width: 123px;
+          height: 123px;
+          
+          .voices{
+            @include fontH1;
+            color: $purple;
+            position: absolute;
+            top: 40px;
+            left: 28px;
+            max-width: 100px;
+            // background: red;
+            text-align: center;
+            line-height: 19px;
+            &>span{
+              @include fontH3;
+
+            }
+          }
+        }
+        .legend {
+          margin: 0;
+          margin-left: 26px;
+          padding: 0;
+          display: block;
+          max-width: 180px;
+          font-size: 14px;
+          line-height: 24px;
+          margin-top: 28px;
+          
+          &-item {
+            display: flex;
+            align-items: flex-start;
+            white-space: pre-wrap;
+      
+            &::before {
+              margin-top: 5px;
+              margin-right: 5px;
+              display: block;
+              width: 10px;
+              min-width: 10px;
+              height: 10px;
+              min-height: 10px;
+              content: '';
+              border-radius: 50%;
+            }
+      
+            &:first-child {
+              &::before {
+                background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
+              }
+            }
+      
+            &:nth-child(2) {
+              &::before {
+                background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+              }
+            }
+        
+            &:nth-child(3) {
+              &::before {
+                background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+              }
+            }
+        
+            &:nth-child(4) {
+              &::before {
+                background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
+              }
+            }
+          }
+      
+          &-text {
+            display: inline-block;
+            overflow: hidden;
+            max-width: 150px;
+            white-space: pre-line;
+            text-overflow: ellipsis;
+          }
+        }
       }
     }
     .reviews {
-      margin-top: 10px;
+      margin-top: 5px;
       &>h2{
         margin: 0;
-        margin-bottom: 21px;
+        margin-bottom: 19px;
+        &>span{
+          @include fontBody;
+          float: right;
+        }
       }
       .comment-container {
         position: relative;
@@ -132,6 +222,7 @@
         height: max-content;
         width: max-content;
         margin-bottom: 24px;
+        margin-left: -2px;
         .leftContainer {
           .avatar {
             border-radius: 100%;
@@ -221,6 +312,7 @@
         position: relative;
         margin: 0;
         margin-top: 15px;
+        margin-left: -3px;
         padding: 0;
 
         &-item {

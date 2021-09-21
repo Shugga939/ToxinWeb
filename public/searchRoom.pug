@@ -1,0 +1,123 @@
+extends /layout/base
+include /includes/mixins
+block variables
+    -var pageTitle= 'Подходящие номера'
+  
+block content
+  .wrapper_searchRoom
+    .filter
+      .dates
+        .title.input_selected Даты пребывания в отеле
+        input(
+          type="text"
+          name="dateFilter"
+          readonly = "true"
+          placeholder = "19 авг - 23 авг"
+          )
+        button(type="button").dropbutton-middle.dropbutton_close
+      .guests
+        .title.input_selected Гости
+        input(
+          type="text"
+          name="dateFilter"
+          readonly = "true"
+          placeholder = "3 Гостя, 1 младенец"
+          )
+        button(type="button").dropbutton-middle.dropbutton_close
+      .price
+        .title Диапазон цены
+        .range-slider-container 
+          input(type="text" class='slider-value' value='5 000P - 10 000P' readonly='true')
+          .range-slider
+        div Стоимость за сутки пребывания в номере
+      .rules
+        .title Правила дома
+        .checkboxes-container
+          +checkbox("Можно курить")
+          +checkboxChecked("Можно с питомцами")
+          +checkboxChecked("Можно пригласить гостей (до 10 человек)")
+      .availability
+        .title Доступность
+        .checkboxes-container
+          +checkboxWithDesc('Широкий коридор', 'Ширина коридоров в номере не  менее 91см.')
+          +checkboxWithDesc('Помощник для инвалидов', 'На 1 этаже вас встретит специалист и проводит до номера')
+      .facilities
+        .title.input_selected Удобства номера
+        input(
+        type="text"
+        name="dateFilter"
+        readonly = "true"
+        placeholder = "2 спальни, 2 кровати..."
+        )
+        button(type="button").dropbutton-middle.dropbutton_close
+      .more_facilities
+        .title.drop-list_closed Дополнительные удобства
+        .checkboxes-container
+            +checkbox('Завтрак')
+            +checkboxChecked('Письменный стол')
+            +checkboxChecked('Cтул для кормления')
+            +checkboxChecked('Кроватка')
+            +checkbox('Телевизор')
+            +checkbox('Шампунь')
+            +checkbox('Телевизор')
+            +checkbox('Шампунь')
+    .rooms
+      .h1 Номера, которые мы для вас подобрали
+      .rooms-mainContainer
+        +roomCart({
+          number:'888',
+          luxe:'true',
+          price:'9 990',
+          stars: '5',
+          reviews: '145',
+          images: '2', 
+          srcImg1: '/images/room1.png'})
+        +roomCart({
+          number:'840',
+          luxe:'',
+          price:'9 990',
+          stars: '4',
+          reviews: '65',
+          images: '1', 
+          srcImg1: '/images/room1.png'})
+        +roomCart({
+          number:'980',
+          luxe:'true',
+          price:'8 500',
+          stars: '3',
+          reviews: '35',
+          images: '1', 
+          srcImg1: '/images/room1.png'})
+        +roomCart({
+          number:'856',
+          luxe:'',
+          price:'7 300',
+          stars: '3',
+          reviews: '19',
+          images: '1', 
+          srcImg1: '/images/room1.png'})
+        +roomCart({
+          number:'856',
+          luxe:'',
+          price:'7 300',
+          stars: '3',
+          reviews: '19',
+          images: '1', 
+          srcImg1: '/images/room1.png'})
+        +roomCart({
+          number:'856',
+          luxe:'',
+          price:'7 300',
+          stars: '3',
+          reviews: '19',
+          images: '1', 
+          srcImg1: '/images/room1.png'})
+        +roomCart({
+          number:'856',
+          luxe:'',
+          price:'7 300',
+          stars: '3',
+          reviews: '19',
+          images: '1', 
+          srcImg1: '/images/room1.png'})
+    .pages

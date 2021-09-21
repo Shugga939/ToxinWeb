@@ -173,7 +173,6 @@
 
 .checkbox{
   position: relative;
-  margin-left: -2px;
   height: 18px;
   width: 18px;
   margin-bottom: 10px;
@@ -205,17 +204,25 @@
     border-color: $purple;
   }
   .name{
-    line-height:16px;
+    line-height:18px;
     position: absolute;
     width: 210px;
     margin-left: 30px;
   }
+  .nameBold{
+    line-height:18px;
+    position: absolute;
+    width: 210px;
+    margin-left: 30px;
+    font-weight: bold;
+    color: $darkShade75;
+  }
   .description{
     position: relative;
     @include fontBody;
-    line-height: 13px;
+    line-height: 14px;
     font-size: 12px;
-    margin-top: 8px;
+    margin-top: 25px;
     margin-bottom: 0px;
     margin-left: 29px;
     width: 230px;
@@ -297,17 +304,23 @@
     @include input(265px);
     margin-bottom: 79px;
   }
+  .input_selected + input{   //add from title
+    &::placeholder{
+        color: $darkShade75;
+      
+    }
+  }
 
 
 //dropbuttons for inputs
   .dropbutton{
-    @include dropButton(273px);
+    @include dropButton(277px);
   }
   .dropbutton-short{
-    @include dropButton(103px);
+    @include dropButton(107px);
   }
   .dropbutton-middle{
-    @include dropButton(218px);
+    @include dropButton(222px);
   }
 
 //modificators for dropbuttons  

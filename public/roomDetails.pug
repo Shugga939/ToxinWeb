@@ -18,14 +18,27 @@ block content
         +advantage('Уют')
       .impressions
         h2 Впечатления от номера
-        canvas(width = '100')#rating
+        .diagram-container
+          .diagram
+            canvas#rating
+            .voices 260 <br>
+              span голосов
+          
+          ul.legend
+            li.legend-item 
+              span.legend-text Великолепно
+            li.legend-item 
+              span.legend-text Хорошо
+            li.legend-item Удовлетворительно
+            li.legend-item Разочарован
       .reviews 
         h2 Отзывы посетителей номера
+          span 2 отзыва
         +comment('/images/avatar.png','12', true, 'Мурад Сарофанов', '5 дней назад', 
         'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. ' +
         'И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару - никто не жаловался из соседей.'
         )
-        +comment('/images/avatar.png','2', false, 'Патрисия Стеклышкова', 'Неделю назад', 
+        +comment('/images/avatar2.png','2', false, 'Патрисия Стеклышкова', 'Неделю назад', 
         'Обслуживание на высоте! Все аккуратно, чисто. Завтраки в номер советую заказать, ' +
         'каждый день новое блюдо и десерт как комплимент.'
         )

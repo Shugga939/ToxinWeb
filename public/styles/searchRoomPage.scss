@@ -1,0 +1,250 @@
+
+
+.wrapper_searchRoom {
+  position: relative;
+  max-width: 1920px;
+  display: flex;
+  // flex-wrap: wrap;
+  // border-bottom: 1px solid $darkShade50;
+  justify-content: center;
+
+  @media (max-width:1156px) {
+    .filter{
+      margin-left: 20px;
+    }
+  }
+  @media (max-width:650px) {
+    .filter{
+      margin-left: 20px;
+    }
+  }
+  .filter{
+    position: relative;
+    // margin-left: 10%;
+    margin-top: 30px;
+    
+    .title {
+      @include fontH3;
+      color: $darkShade100;
+      margin-bottom: 6px;
+    }
+    .guests{
+      position: relative;
+    }
+    .price{
+      .title{
+        margin-top: 10px;
+        margin-bottom: 0px;
+      }
+      .range-slider-container{
+        position: relative;
+        
+        input[class='slider-value'] {
+          font-size: 12px;
+          color: $darkShade50;
+          position: relative; 
+          right: -162px;
+          top: -20px;
+          border: none;
+
+          &:focus{
+            outline: none;
+          }
+        }
+        .range-slider{
+          position: relative;
+          height: 4px;
+          width: 263px;
+          .ui-slider{
+          
+            &-horizontal {
+                background: blue;
+                height: 5px;
+            }
+            &-range{
+                top: -0.1px;
+                height: 4.5px;
+                background: $greenGr;
+            }
+            &-handle {
+              top: -5.5px;
+              width: 12px;
+              height: 12px;
+              border-radius: 100% ;
+              border: 1px solid white;
+              background: $greenGr;
+              
+              &:focus{
+                  outline: none;
+              }
+            }
+          }
+        }
+      }
+      .range-slider-container+div{
+        font-size: 0.75rem;
+        margin-top: 10px;
+        margin-bottom: 23px;
+      }
+    }
+    .rules{
+
+      .checkboxes-container{
+        margin-top: 17px;
+        padding-bottom: 5px;
+        .checkboxContainer{
+          margin-bottom: 6px;
+        }
+      }
+    }
+    .availability{
+      margin-top: 33px;
+      .checkboxes-container{
+        margin-top: 16px;
+      }
+      .checkboxContainer{
+        margin-bottom: 12px;
+        height: 51px;
+      }
+    }
+    .facilities{
+      margin-top: 30px;
+    }
+    .more_facilities{
+      margin-top: 10px;
+      width: 250px;
+      .title{
+      margin-bottom: 20px;
+      }
+      .drop-list_closed{
+        background-image: url(/images/dropd.svg);
+        background-repeat: no-repeat;
+        background-position: right;
+      }
+      .drop-list_opened{
+        background-image: url(/images/upd.svg);
+        background-repeat: no-repeat;
+        background-position: right;
+      }
+      .checkboxContainer{
+        margin-bottom: 6px;
+      }
+    }
+  }
+  .rooms{
+    margin-left: 60px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    .h1{
+      @include fontH1;
+    }
+    .rooms-mainContainer{
+      position: relative;
+      max-width: 850px;
+      margin-top: 21px;
+      display: flex;
+      flex-wrap: wrap;
+      .room-cart{
+        position: relative;
+        height: auto;
+        width: 270px;
+        margin-left: 1px;
+        margin-right: 10px;
+        margin-bottom: 17px;
+        background-color: white;
+        border-radius: 4px ;
+        &-slick{
+          border-radius: 4px;
+          position: relative;
+          margin-bottom: 4px;
+          max-height: 152px;
+        
+          img {
+            position: relative;
+            height: 152px;
+            // background: rgb(166, 168, 180);
+          }
+        }
+        
+        &-number_and_price{
+          position: relative;
+          width: 85%;
+          margin-top: 16px;
+          margin-left: 20px;
+          padding-bottom: 7px;
+          display: inline-flex;
+          justify-content: space-between;
+          border-bottom: 1px solid $darkShade25;
+          .number{
+            font-size: 0.9rem;
+            font-weight: bold;
+            position: relative;
+            &>span{
+              font-size: 19px;
+              line-height: 25px;
+            }
+            &>span+span{
+              font-size: 0.75rem;
+              color: $purple;
+              text-transform: uppercase;
+              margin-left: 5px;
+            }
+          }
+          .price{
+            @include fontBody;
+            font-size: 0.9rem;
+            color: $darkShade50;
+            position: absolute;
+            width: 120px;
+            top: 2px;
+            left: 133px;
+            font-weight: bold;
+
+            &>span{
+              font-weight: normal;
+              font-size: 12px;
+            }
+          }
+        }
+        &-raiting{
+          display: inline-flex;
+          margin-top: 9px;
+          margin-left: 22px;
+          margin-bottom: 18px;
+          width: 280px;
+  
+          &-stars {
+            position: relative;
+            margin-right: 17px;
+  
+            .active {
+              content: url("/images/star.svg");
+              height: 20px;
+              width: 20px;
+              margin-right: 4px;
+            }
+            .pasive {
+              content: url("/images/star_border.svg");
+              height: 20px;
+              width: 20px;
+              margin-right: 4px;
+            }
+          }
+          &-reviews{
+            @include fontBody;
+            font-weight: bold;
+            font-size: 15px;
+            position: absolute;
+            right: 18px;
+            
+            &>span{
+              @include fontBody;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+ 
