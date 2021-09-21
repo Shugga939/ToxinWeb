@@ -1,13 +1,14 @@
+
 .wrapper_landingPage {
   position: relative;
   background-position: center 100%;
   max-width: 1920px;
+  min-width: 378px;
   display: flex;
   height: 830px;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(/images/mainBG.jpg);
-
   .find{
     position: absolute;
     background: white;
@@ -19,6 +20,7 @@
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     color: $darkShade100;
     
+
       input{
         &::placeholder{
           color: $darkShade75;
@@ -189,5 +191,17 @@
     text-align: right;
     z-index: 1;
     color: $darkShade75;
+  }
+}
+@media (max-width:992px) {
+  .wrapper_landingPage{
+    justify-content: center;
+    align-items: center;
+  }
+  .wrapper_landingPage .find{
+    margin: 0;
+  }
+  .sub {
+    display: none;
   }
 }
