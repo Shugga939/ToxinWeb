@@ -13,7 +13,8 @@ block content
             .description Прибытие
             input#arrival(
             type="text"
-            name="dateShort"
+            name="dateArrival"
+            view="short"
             readonly = "true"
             placeholder = "ДД.ММ.ГГГГ"
             )
@@ -22,21 +23,23 @@ block content
             .description Выезд
             input#leaving(
             type="text"
-            name="dateShort"
+            name="dateLeaving"
+            view="short"
             readonly = "true"
             placeholder = "ДД.ММ.ГГГГ"
             )
             button#button_leaving(type="button").dropbutton-short.dropbutton_close
         .find-container-guests
           .description Гости
-          input#guests(
+          input(
           type="text"
           name="guests"
+          view="long"
           readonly = "true"
           placeholder = "Сколько гостей"
           )
-          button#guests_button(type="button").dropbutton.dropbutton_close
-          .dropMenu#dropMenu1
+          button(type="button").dropbutton.dropbutton_close
+          .dropMenu
             .item(data-guests-type='adult') Взрослые
               button(type="button").minus.minus-unactive -
               span 0

@@ -274,36 +274,22 @@
 }
 
 //inputs
-  input[name='textField'],[name='date'],[name='guests'] {
-    @include input(320px);
+  input[view='middle'] {
+    @include input(265px);
   }
-  input[name='textFieldHover'] {
-    @include input(320px);
-    border-color: $darkShade50;
+  input[view='short'] {
+    @include input(150px);
     &::placeholder{
       color:$darkShade75;
     }
   }
-  input[name='dateShort'] {
-    @include input(150px);
-    &:focus, &:hover{
-      border-color: $darkShade50;
+  input[view='long'] {
+    @include input(320px);
+    &::placeholder{
+      color:$darkShade75;
     }
   }
-  
-  input[name='dateFilter'],[name='subscrition'],[name='roomsdef'] {
-    @include input(265px);
-    margin-bottom: 20px;
-  }
-  input[name='rooms'] {
-    @include input(265px);
-    margin-bottom: 20px;
-    border-color: $darkShade75;
-  }
-  input[name='subscrition'] {
-    @include input(265px);
-    margin-bottom: 79px;
-  }
+
   .input_selected + input{   //add from title
     &::placeholder{
         color: $darkShade75;

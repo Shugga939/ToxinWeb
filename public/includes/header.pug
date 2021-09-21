@@ -4,9 +4,9 @@ header.header
   nav.header-nav
     ul.header-nav-list
       li.header-nav-list-item
-        a(href="roomDetails.pug").bold_font О нас
-      li.header-nav-list-item.arrow-down Услуги
-        ul.drop-list
+        a(href="roomDetails.pug") О нас
+      li(attr='list').header-nav-list-item.drop-list_closed Услуги
+        ul(attr="list-hiden").drop-list.hide
           li.drop-list-item
             a(href="#") Обслуживание номера  
           li.drop-list-item
@@ -17,8 +17,8 @@ header.header
         a(href="searchRoom.pug") Вакансии
       li.header-nav-list-item
         a(href="#") Новости
-      li.header-nav-list-item.arrow-down Соглашения
-        ul.drop-list
+      li(attr='list').header-nav-list-item.drop-list_closed Соглашения
+        ul(attr="list-hiden").drop-list.hide
           li.drop-list-item
             a(href="#") Конфиденциальность
           li.drop-list-item

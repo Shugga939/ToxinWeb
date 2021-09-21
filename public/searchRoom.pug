@@ -10,7 +10,8 @@ block content
         .title.input_selected Даты пребывания в отеле
         input(
           type="text"
-          name="dateFilter"
+          name="dates"
+          view="middle"
           readonly = "true"
           placeholder = "19 авг - 23 авг"
           )
@@ -19,11 +20,28 @@ block content
         .title.input_selected Гости
         input(
           type="text"
-          name="dateFilter"
+          name="guests"
+          view="middle"
           readonly = "true"
           placeholder = "3 Гостя, 1 младенец"
           )
         button(type="button").dropbutton-middle.dropbutton_close
+        .dropMenu
+          .item(data-listNumber='1') Взрослые
+            button(type="button").minus.minus-unactive -
+            span 0
+            button(type="button").plus +
+          .item(data-listNumber='2') Дети
+            button(type="button").minus.minus-unactive -
+            span 0
+            button(type="button").plus +
+          .item(data-listNumber='3') Младенцы
+            button(type="button").minus.minus-unactive -
+            span 0
+            button(type="button").plus +
+          .buttons-container
+            button(type="button" data-guests-button='clear').button-purple_text Очистить
+            button(type="button" data-guests-button='confirm').button-purple_text Применить
       .price
         .title Диапазон цены
         .range-slider-container 
@@ -45,14 +63,31 @@ block content
         .title.input_selected Удобства номера
         input(
         type="text"
-        name="dateFilter"
+        name="facilities"
+        view="middle"
         readonly = "true"
         placeholder = "2 спальни, 2 кровати..."
         )
         button(type="button").dropbutton-middle.dropbutton_close
-      .more_facilities
-        .title.drop-list_closed Дополнительные удобства
-        .checkboxes-container
+        .dropMenu
+          .item(data-listNumber='1') Взрослые
+            button(type="button").minus.minus-unactive -
+            span 0
+            button(type="button").plus +
+          .item(data-listNumber='2') Дети
+            button(type="button").minus.minus-unactive -
+            span 0
+            button(type="button").plus +
+          .item(data-listNumber='3') Младенцы
+            button(type="button").minus.minus-unactive -
+            span 0
+            button(type="button").plus +
+          .buttons-container
+            button(type="button" data-guests-button='clear').button-purple_text Очистить
+            button(type="button" data-guests-button='confirm').button-purple_text Применить
+      .more_facilities(attr="list").drop-list_closed
+        .title Дополнительные удобства
+        div(attr="list-hiden").checkboxes-container.hide
             +checkbox('Завтрак')
             +checkboxChecked('Письменный стол')
             +checkboxChecked('Cтул для кормления')

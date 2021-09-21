@@ -11,6 +11,9 @@
     // margin-left: 10%;
     margin-top: 30px;
     
+    .dates{
+      margin-bottom: 20px;
+    }
     .title {
       @include fontH3;
       color: $darkShade100;
@@ -18,6 +21,99 @@
     }
     .guests{
       position: relative;
+      margin-bottom: 20px;
+
+      .dropMenu {
+        @include fontH3;
+        position: absolute;
+        width: 263px;
+        height: 157px;
+        top: 61px;
+        background: #FFFFFF;
+        text-transform: uppercase;
+        border: 1px solid $darkShade50;
+        border-radius: 0px 0px 5px 5px ;
+        box-sizing: content-box;
+        box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+        display: none;
+        z-index: 100;
+
+          .dropMenu_show{
+            display: block;
+          }
+          .item {
+            position: relative;
+            color: $darkShade100;
+            padding-top: 13px;
+            padding-bottom: 9px;
+            padding-left: 13px;
+              
+            .minus {
+              position: absolute;
+              width: 30px;
+              height: 30px;
+              left: 165px;
+              top: 7px;
+              color: $darkShade25;
+              border: 1px solid $darkShade25;
+              box-sizing: border-box;
+              border-radius: 22px;
+              font-weight: normal;
+              font-size: 18px;
+              line-height: 22px;
+              padding-bottom: 3px;
+              background-color: #FFFFFF;
+              cursor: pointer;
+              padding-top: 3px;
+                &-unactive{
+                    color: $darkShade05;
+                    border-color: $darkShade05;
+                    cursor: default;
+                }
+            }
+          
+            :nth-child(even){
+              position: absolute;
+              left: 208px;
+              cursor: default;
+            }
+          
+            .plus {
+              position: absolute;
+              width: 30px;
+              height: 30px;
+              left: 225px;
+              top: 7px;
+              color: $darkShade25;
+              border: 1px solid $darkShade25;
+              box-sizing: border-box;
+              border-radius: 22px;
+              font-weight: normal;
+              font-size: 18px;
+              line-height: 22px;
+              padding-bottom: 3px;
+              background-color: #FFFFFF;
+              cursor: pointer;
+              padding-top: 4px;
+
+              &-unactive{
+                color: $darkShade05;
+                border-color: $darkShade05;
+              }
+            }
+          }
+          .buttons-container{
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 10px;
+
+          .hide{
+            opacity: 0;
+            cursor: default;
+          }
+        }
+      }
     }
     .price{
       .title{
@@ -96,27 +192,132 @@
       }
     }
     .facilities{
+      position: relative;
       margin-top: 30px;
+      margin-bottom: 20px;
+
+      .dropMenu {
+        @include fontH3;
+        position: absolute;
+        width: 263px;
+        height: 157px;
+        top: 61px;
+        background: #FFFFFF;
+        text-transform: uppercase;
+        border: 1px solid $darkShade50;
+        border-radius: 0px 0px 5px 5px ;
+        box-sizing: content-box;
+        box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+        display: none;
+        z-index: 100;
+
+          .dropMenu_show{
+            display: block;
+          }
+          .item {
+            position: relative;
+            color: $darkShade100;
+            padding-top: 13px;
+            padding-bottom: 9px;
+            padding-left: 13px;
+              
+            .minus {
+              position: absolute;
+              width: 30px;
+              height: 30px;
+              left: 165px;
+              top: 7px;
+              color: $darkShade25;
+              border: 1px solid $darkShade25;
+              box-sizing: border-box;
+              border-radius: 22px;
+              font-weight: normal;
+              font-size: 18px;
+              line-height: 22px;
+              padding-bottom: 3px;
+              background-color: #FFFFFF;
+              cursor: pointer;
+              padding-top: 3px;
+                &-unactive{
+                    color: $darkShade05;
+                    border-color: $darkShade05;
+                    cursor: default;
+                }
+            }
+          
+            :nth-child(even){
+              position: absolute;
+              left: 208px;
+              cursor: default;
+            }
+          
+            .plus {
+              position: absolute;
+              width: 30px;
+              height: 30px;
+              left: 225px;
+              top: 7px;
+              color: $darkShade25;
+              border: 1px solid $darkShade25;
+              box-sizing: border-box;
+              border-radius: 22px;
+              font-weight: normal;
+              font-size: 18px;
+              line-height: 22px;
+              padding-bottom: 3px;
+              background-color: #FFFFFF;
+              cursor: pointer;
+              padding-top: 4px;
+
+              &-unactive{
+                color: $darkShade05;
+                border-color: $darkShade05;
+              }
+            }
+          }
+          .buttons-container{
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 10px;
+
+          .hide{
+            opacity: 0;
+            cursor: default;
+          }
+        }
+      }
     }
     .more_facilities{
       margin-top: 10px;
       width: 250px;
+      
       .title{
-      margin-bottom: 20px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        user-select: none;
+        
       }
-      .drop-list_closed{
-        background-image: url(/images/dropd.svg);
-        background-repeat: no-repeat;
-        background-position: right;
+      .checkboxes-container{
+        .checkboxContainer{
+          margin-bottom: 6px;
+        }
       }
-      .drop-list_opened{
-        background-image: url(/images/upd.svg);
-        background-repeat: no-repeat;
-        background-position: right;
+      .hide{
+        display: none;
       }
-      .checkboxContainer{
-        margin-bottom: 6px;
-      }
+    }
+    .drop-list_closed{
+      background-image: url(/images/dropd.svg);
+      background-repeat: no-repeat;
+      background-position-x: right;
+      background-position-y: 2px;
+    }
+    .drop-list_opened{
+      background-image: url(/images/upd.svg);
+      background-repeat: no-repeat;
+      background-position-x: right;
+      background-position-y: 2px;
     }
   }
   .rooms{
@@ -235,7 +436,6 @@
         }
       }
     }
-  
     .pagination-main-container{
       position:relative;
       display: flex;
@@ -317,7 +517,6 @@
   }
 }
 }
-
 @media (max-width:936px) {
   .wrapper_searchRoom {
     flex-direction: column;
@@ -330,7 +529,6 @@
   }
 
 }
-
 @media (max-width:650px) {
   .wrapper_searchRoom{
   flex-wrap: wrap;
