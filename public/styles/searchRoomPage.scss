@@ -302,7 +302,7 @@
       }
       .checkboxes-container{
         .checkboxContainer{
-          margin-bottom: 6px;
+          padding-bottom: 6px;
         }
       }
       .hide{
@@ -520,11 +520,6 @@
 }
 }
 @media (max-width:936px) {
-  body{
-    .datepickers-container{
-      left:-25px;
-    }
-  }
   .wrapper_searchRoom {
     flex-direction: column;
     align-items: center;

@@ -92,21 +92,21 @@ block content
             )
             button(type="button").dropbutton.dropbutton_close
             .dropMenu
-              .item Взрослые
+              .item(data-listNumber='1') Взрослые
                 button(type="button").minus.minus-unactive -
-                span 0
+                span(data-startValue=3) 0
                 button(type="button").plus +
-              .item Дети
+              .item(data-listNumber='2') Дети
                 button(type="button").minus.minus-unactive -
-                span 0
+                span(data-startValue=0) 0
                 button(type="button").plus +
-              .item Младенцы
+              .item(data-listNumber='3') Младенцы
                 button(type="button").minus.minus-unactive -
-                span 0
+                span(data-startValue=0) 0
                 button(type="button").plus +
               .buttons-container
-                button(type="button").button-purple_text Очистить
-                button(type="button").button-purple_text Применить
+                button(type="button" data-button='clear').button-purple_text Очистить
+                button(type="button" data-button='confirm').button-purple_text Применить
           .booking-container-pay_detail
             .sum_for_days 
               .info 9 990₽ x 4 суток

@@ -6,8 +6,6 @@
 @import "styles/roomDetailsPage";
 @import 'styles/searchRoomPage.scss';
 @import 'plugins/datepicker/datepicker';
-// @import 'plugins/slick/slick-theme.scss';
-
 @font-face {
     font-family: 'Material Icons';
     font-style: normal;
@@ -15,7 +13,7 @@
     src: local('Material Icons'),
          local('MaterialIcons-Regular'),
          url(/fonts/material-icons.woff2) format('woff2'),
- }  
+}  
  
  .material-icons {
    font-family: 'Material Icons';

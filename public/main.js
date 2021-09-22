@@ -11,7 +11,7 @@ import {initChartPie} from '/js/chartPie'
 import {initSlick} from '/js/slickJs'
 import {dropDownList} from '/js/dropDownList'
 import {initDropMenu} from '/js/dropMenu'
-
+import {initLikeButtons} from '/js/likeButtons'
 
 $(document).ready(function(){
   
@@ -21,6 +21,7 @@ $(document).ready(function(){
   initChartPie();
   initSlick();
   initDropMenu();
+  initLikeButtons();
 
 })
 

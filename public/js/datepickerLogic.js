@@ -25,8 +25,7 @@ export const initDatePicker = function (){
       clearButton: true,
       minDate: new Date(),
       toggleSelected: true,
-      
-    //do It
+      multipleDatesSeparator: ' - ',
   })}
   
   firstdate_button.on('click', function (){
@@ -89,15 +88,4 @@ export const initDatePicker = function (){
       firstdate.attr('disabled',false)
     }
   })
-  }
-  function initSoloInput(){
-    firstdate.datepicker({
-      range: true,
-      todayButton: true,
-      clearButton: true,
-      minDate: new Date(),
-      toggleSelected: true,
-      
-    })
-  
 }
