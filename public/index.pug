@@ -11,7 +11,7 @@ block content
         .find-container-dates
           .containerLeft
             .description Прибытие
-            input#arrival(
+            input(
             type="text"
             name="dateArrival"
             view="short"
@@ -21,7 +21,7 @@ block content
             button#button_arrival(type="button").dropbutton-short.dropbutton_close
           .containerRight
             .description Выезд
-            input#leaving(
+            input(
             type="text"
             name="dateLeaving"
             view="short"
@@ -40,23 +40,23 @@ block content
           )
           button(type="button").dropbutton.dropbutton_close
           .dropMenu
-            .item(data-guests-type='adult') Взрослые
+            .item(data-listNumber='1') Взрослые
               button(type="button").minus.minus-unactive -
-              span 0
+              span(data-startValue=0) 0
               button(type="button").plus +
-            .item(data-guests-type='children') Дети
+            .item(data-listNumber='2') Дети
               button(type="button").minus.minus-unactive -
-              span 0
+              span(data-startValue=0) 0
               button(type="button").plus +
-            .item(data-guests-type='baby') Младенцы
+            .item(data-listNumber='3') Младенцы
               button(type="button").minus.minus-unactive -
-              span 0
+              span(data-startValue=0) 0
               button(type="button").plus +
             .buttons-container
-              button(type="button" data-guests-button='clear').button-purple_text Очистить
-              button(type="button" data-guests-button='confirm').button-purple_text Применить
-        .button-container
-          button(type="submit").button-purple_long Подобрать номер
+              button(type="button" data-button='clear').button-purple_text Очистить
+              button(type="button" data-button='confirm').button-purple_text Применить
+          .button-container
+            button(type="submit").button-purple_long Подобрать номер
     .sub Лучшие номера для вашей работы, <br>отдыха и просто вдохновения
                 
             

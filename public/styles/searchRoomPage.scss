@@ -1,3 +1,4 @@
+
 .wrapper_searchRoom {
   position: relative;
   max-width: 1600px;
@@ -27,7 +28,7 @@
         @include fontH3;
         position: absolute;
         width: 263px;
-        height: 157px;
+        height: min-content;
         top: 61px;
         background: #FFFFFF;
         text-transform: uppercase;
@@ -106,7 +107,8 @@
             position: relative;
             display: flex;
             justify-content: space-between;
-            margin: 20px 10px;
+            border-radius: 4px;
+            margin: 20px 10px 11px 10px;
 
           .hide{
             opacity: 0;
@@ -200,7 +202,7 @@
         @include fontH3;
         position: absolute;
         width: 263px;
-        height: 157px;
+        height: min-content;
         top: 61px;
         background: #FFFFFF;
         text-transform: uppercase;
@@ -279,7 +281,7 @@
             position: relative;
             display: flex;
             justify-content: space-between;
-            margin: 20px 10px;
+            margin: 20px 10px 11px 10px;
 
           .hide{
             opacity: 0;
@@ -518,6 +520,11 @@
 }
 }
 @media (max-width:936px) {
+  body{
+    .datepickers-container{
+      left:-25px;
+    }
+  }
   .wrapper_searchRoom {
     flex-direction: column;
     align-items: center;

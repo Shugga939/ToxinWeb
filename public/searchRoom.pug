@@ -10,7 +10,7 @@ block content
         .title.input_selected Даты пребывания в отеле
         input(
           type="text"
-          name="dates"
+          name="dateArrival"
           view="middle"
           readonly = "true"
           placeholder = "19 авг - 23 авг"
@@ -29,19 +29,19 @@ block content
         .dropMenu
           .item(data-listNumber='1') Взрослые
             button(type="button").minus.minus-unactive -
-            span 0
+            span(data-startValue=3) 0
             button(type="button").plus +
           .item(data-listNumber='2') Дети
             button(type="button").minus.minus-unactive -
-            span 0
+            span(data-startValue=0) 0
             button(type="button").plus +
           .item(data-listNumber='3') Младенцы
             button(type="button").minus.minus-unactive -
-            span 0
+            span(data-startValue=1) 0
             button(type="button").plus +
           .buttons-container
-            button(type="button" data-guests-button='clear').button-purple_text Очистить
-            button(type="button" data-guests-button='confirm').button-purple_text Применить
+            button(type="button" data-button='clear').button-purple_text Очистить
+            button(type="button" data-button='confirm').button-purple_text Применить
       .price
         .title Диапазон цены
         .range-slider-container 
@@ -70,21 +70,17 @@ block content
         )
         button(type="button").dropbutton-middle.dropbutton_close
         .dropMenu
-          .item(data-listNumber='1') Взрослые
+          .item(data-listNumber='1') Спальни
             button(type="button").minus.minus-unactive -
-            span 0
+            span(data-startValue=2) 0
             button(type="button").plus +
-          .item(data-listNumber='2') Дети
+          .item(data-listNumber='2') Кровати
             button(type="button").minus.minus-unactive -
-            span 0
-            button(type="button").plus +
-          .item(data-listNumber='3') Младенцы
-            button(type="button").minus.minus-unactive -
-            span 0
+            span(data-startValue=2) 0
             button(type="button").plus +
           .buttons-container
-            button(type="button" data-guests-button='clear').button-purple_text Очистить
-            button(type="button" data-guests-button='confirm').button-purple_text Применить
+            button(type="button" data-button='clear').button-purple_text Очистить
+            button(type="button" data-button='confirm').button-purple_text Применить
       .more_facilities(attr="list").drop-list_closed
         .title Дополнительные удобства
         div(attr="list-hiden").checkboxes-container.hide
