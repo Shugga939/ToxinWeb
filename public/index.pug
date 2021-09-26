@@ -1,70 +1,24 @@
-extends /layout/base
-block variables
-  -var pageTitle= 'Забронировать номер'
-  -var logoPng = '/images/logo-title.png'
-
-block content
-  .wrapper_landingPage
-    .find
-      form(action="#", method="post").find-container
-        .find-container-h1 Найдём номера под ваши пожелания  
-        .find-container-dates
-          .containerLeft
-            .description Прибытие
-            input(
-            type="text"
-            name="dateArrival"
-            view="short"
-            readonly = "true"
-            placeholder = "ДД.ММ.ГГГГ"
-            )
-            button#button_arrival(type="button").dropbutton-short.dropbutton_close
-          .containerRight
-            .description Выезд
-            input(
-            type="text"
-            name="dateLeaving"
-            view="short"
-            readonly = "true"
-            placeholder = "ДД.ММ.ГГГГ"
-            )
-            button#button_leaving(type="button").dropbutton-short.dropbutton_close
-        .find-container-guests
-          .description Гости
-          input(
-          type="text"
-          name="guests"
-          view="long"
-          readonly = "true"
-          placeholder = "Сколько гостей"
-          )
-          button(type="button").dropbutton.dropbutton_close
-          .dropMenu
-            .item(data-listNumber='1') Взрослые
-              button(type="button").minus.minus-unactive -
-              span(data-startValue=0) 0
-              button(type="button").plus +
-            .item(data-listNumber='2') Дети
-              button(type="button").minus.minus-unactive -
-              span(data-startValue=0) 0
-              button(type="button").plus +
-            .item(data-listNumber='3') Младенцы
-              button(type="button").minus.minus-unactive -
-              span(data-startValue=0) 0
-              button(type="button").plus +
-            .buttons-container
-              button(type="button" data-button='clear').button-purple_text Очистить
-              button(type="button" data-button='confirm').button-purple_text Применить
-          .button-container
-            button(type="submit").button-purple_long Подобрать номер
-    .sub Лучшие номера для вашей работы, <br>отдыха и просто вдохновения
-                
-            
-        
-
-
-
-
-
-                
-        
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="stylesheet", href="/styles/index.scss")
+    title= pageTitle
+    link(rel="icon", href=logoPng)
+  body
+    h1 Toxin <br> site for searching rooms
+    h2 Pages
+    .pages-container
+      a(href="landingPage.pug") Landing Page
+      a(href="SignIn.pug") Login Page
+      a(href="registration.pug") Registration Page
+      a(href="searchRoom.pug") Room Search Page
+      a(href="roomDetails.pug") Room Details Page
+    h2 UI Kit
+    .uikit-container
+      a(href="./../UIKit/ColorAndType/ColorAndType.pug") Colors And Type
+      a(href="./../UIKit/Cards/Cards.pug") Cards
+      a(href="./../UIKit/FormElements/FormElements.pug") Form Elements 
+      a(href="./../UIKit/HeadersAndFooters/HeadersAndFooters.pug") Headers And Footers

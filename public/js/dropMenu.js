@@ -14,7 +14,11 @@ export function initDropMenu () {
     let span_value = dropMenu.find('span');
     let clear_button = dropMenu.find('[data-button="clear"]');
     let confirm_button = dropMenu.find('[data-button="confirm"]');
-    let arrOfItemsValue = span_value.map(function(){ return $(this).attr('data-startValue') });
+    let arrOfItemsValue = [...span_value.map(function(){ return +$(this).attr('data-startValue') })];
+    input.on('click',function(){
+      inputs_button.click();
+    });
+
     (function () {
       let i = 0;
       if (arrOfItemsValue) {
@@ -33,10 +37,13 @@ export function initDropMenu () {
       plus : function (menu_item) {
         switch (menu_item) {
           case '1':
+            +(++arrOfItemsValue[0]); 
             return ++this.first
           case '2' :
+              +(++arrOfItemsValue[1])
               return ++this.second
           case '3' :
+            +(++arrOfItemsValue[2])
             return ++this.third
           default:
             break;
@@ -46,12 +53,15 @@ export function initDropMenu () {
         switch (menu_item) {
           case '1':
             if(this.first-1<0) return;
-              return --this.first
+            +--arrOfItemsValue[0]; 
+            return --this.first
           case '2' :
             if(this.second-1<0) return;
+            +--arrOfItemsValue[1];
               return --this.second
           case '3' :
             if(this.third-1<0) return;
+            +--arrOfItemsValue[2];
               return --this.third
           default:
             break;
@@ -92,14 +102,22 @@ export function initDropMenu () {
           if(this.first == 0 && this.second == 0) return 'Выберите удобства'
           if(this.first != 0 && this.second == 0) return this.first + modificator1
           if(this.second != 0 && this.first == 0) return this.second + modificator2
-
              return this.first+modificator1 + ', ' + this.second+modificator2 + '...'
       }
     }
-  
-    input.on('click',function(){
-      inputs_button.click();
-    })
+
+    function updateInputplacheholder (){
+      if(attr == 'guests') {
+        input.attr('placeholder', counter.toString_guests())
+      }
+      if(attr == 'facilities') {
+        input.attr('placeholder', counter.toString_facilities())
+      }
+      if ([...arrOfItemsValue].every(i => +i==0)) clear_button.css('visibility', 'hidden')
+      if ([...arrOfItemsValue].some(i => +i !==0)) clear_button.css('visibility', '')
+      
+    }
+    updateInputplacheholder ();
     
     inputs_button.on('click',function(){
       dropMenu.hasClass('dropMenu_show') ? dropMenu.hide() : dropMenu.show();
@@ -121,6 +139,7 @@ export function initDropMenu () {
         if(counter.check(menu_item)!=0) {
           $(this).siblings(minus_button).removeClass('minus-unactive')
         }
+        updateInputplacheholder()
     })
   
     minus_button.on('click', function(){
@@ -130,28 +149,22 @@ export function initDropMenu () {
         if(counter.check(menu_item)==0) {
         $(this).addClass('minus-unactive')
       }
+      updateInputplacheholder()
     })
   
     clear_button.on('click',function () {
-      counter.reset();
-      $(this).parent().siblings('div').children('span').text('0')
-      $(this).parent().siblings('div').children('.minus').addClass('minus-unactive')
-      if(attr == 'guests') {
-        $(this).parent().parent().siblings('input').attr('placeholder', counter.toString_guests())
-      }
-      if(attr == 'facilities') {
-        $(this).parent().parent().siblings('input').attr('placeholder', counter.toString_facilities())
-      }
+      counter.reset()
+      dropMenu.children('div').children('span').text('0')
+      dropMenu.children('div').children('.minus').addClass('minus-unactive');
+      arrOfItemsValue.forEach((el,index) => {
+        arrOfItemsValue[index]=0
+      });
+      updateInputplacheholder()
     })
   
     confirm_button.on('click',function(){
-      inputs_button.click();
-      if(attr == 'guests') {
-        $(this).parent().parent().siblings('input').attr('placeholder', counter.toString_guests())
-      }
-      if(attr == 'facilities') {
-        $(this).parent().parent().siblings('input').attr('placeholder', counter.toString_facilities())
-      }
+      inputs_button.click()
+      updateInputplacheholder()
     })
-  } 
+  }
 }

@@ -23,7 +23,7 @@ block content
           name="guests"
           view="middle"
           readonly = "true"
-          placeholder = "3 Гостя, 1 младенец"
+          placeholder = "Сколько гостей"
           )
         button(type="button").dropbutton-middle.dropbutton_close
         .dropMenu
@@ -66,7 +66,7 @@ block content
         name="facilities"
         view="middle"
         readonly = "true"
-        placeholder = "2 спальни, 2 кровати..."
+        placeholder = "Выберите удобства"
         )
         button(type="button").dropbutton-middle.dropbutton_close
         .dropMenu
@@ -77,6 +77,10 @@ block content
           .item(data-listNumber='2') Кровати
             button(type="button").minus.minus-unactive -
             span(data-startValue=2) 0
+            button(type="button").plus +
+          .item(data-listNumber='3') Ванные комнаты
+            button(type="button").minus.minus-unactive -
+            span(data-startValue=0) 0
             button(type="button").plus +
           .buttons-container
             button(type="button" data-button='clear').button-purple_text Очистить
