@@ -2,7 +2,7 @@
 window.$ = require('jquery')
 window.jQuery = require('jquery')
 import '/plugins/slick/slick'
-import '/plugins/chartJs/dist/chart'
+import '/plugins/chartJs/chart/chart'
 import '/styles/jquery-ui/jquery-ui'
 import '/plugins/datepicker/datepicker'
 import {initDatePicker} from '/js/datepickerLogic'
