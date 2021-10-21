@@ -29,22 +29,23 @@ export function initDropMenu () {
       }
     })() //init start value
     
-      let counter = {
-      first : arrOfItemsValue[0],
-      second : arrOfItemsValue[1],
-      third : arrOfItemsValue[2],
-  
+    let counter = (function (){
+      let first = arrOfItemsValue[0];
+      let second = arrOfItemsValue[1];
+      let third = arrOfItemsValue[2]
+
+     return {
       plus : function (menu_item) {
         switch (menu_item) {
           case '1':
             +(++arrOfItemsValue[0]); 
-            return ++this.first
+            return ++first
           case '2' :
               +(++arrOfItemsValue[1])
-              return ++this.second
+              return ++second
           case '3' :
             +(++arrOfItemsValue[2])
-            return ++this.third
+            return ++third
           default:
             break;
         }
@@ -52,59 +53,60 @@ export function initDropMenu () {
       minus : function (menu_item) {
         switch (menu_item) {
           case '1':
-            if(this.first-1<0) return;
+            if(first-1<0) return;
             +--arrOfItemsValue[0]; 
-            return --this.first
+            return --first
           case '2' :
-            if(this.second-1<0) return;
+            if(second-1<0) return;
             +--arrOfItemsValue[1];
-              return --this.second
+              return --second
           case '3' :
-            if(this.third-1<0) return;
+            if(third-1<0) return;
             +--arrOfItemsValue[2];
-              return --this.third
+              return --third
           default:
             break;
         }
       },
       check : function (menu_item) {
         if (menu_item == '1'){ 
-        return this.first}
+        return first}
         if (menu_item == '2')
-        return this.second
+        return second
         if (menu_item == '3')
-        return this.third
+        return third
       },
       reset : function () {
-        this.first = 0;
-        this.second = 0;
-        this.third = 0;
+        first = 0;
+        second = 0;
+        third = 0;
       },
       toString_guests: function() {
-        let sum = +this.first + +this.second
+        let sum = +first + +second
         let modificator1 = ' гостей'
         let modificator2 = ' младенцев'
           if(sum%10==1 && sum !=11) modificator1 = ' гость'
           if(sum==2 || sum==3 || sum==4) modificator1 = ' гостя'
-          if(this.third%10==1 && this.third !=11) modificator2 = ' младенец'
-          if(this.third==2 || this.third==3 || this.third==4) modificator2 = ' младенца'
-          if(this.third == 0 && sum == 0) return 'Сколько гостей'
-          if(this.third == 0) return sum+modificator1
-                             return sum+modificator1 + ', ' + this.third+modificator2
+          if(third%10==1 && third !=11) modificator2 = ' младенец'
+          if(third==2 || third==3 || third==4) modificator2 = ' младенца'
+          if(third == 0 && sum == 0) return 'Сколько гостей'
+          if(third == 0) return sum+modificator1
+                             return sum+modificator1 + ', ' + third+modificator2
       },
       toString_facilities: function() {
         let modificator1 = ' Спальня'
         let modificator2 = ' Кровать'
-          if(this.first>1 && this.first<5) modificator1 = ' спальни'
-          if(this.first>4) modificator1 = ' спален'
-          if(this.second>1 && this.second<5) modificator2 = ' кровати'
-          if(this.second>4) modificator2 = ' кроватей'
-          if(this.first == 0 && this.second == 0) return 'Выберите удобства'
-          if(this.first != 0 && this.second == 0) return this.first + modificator1
-          if(this.second != 0 && this.first == 0) return this.second + modificator2
-             return this.first+modificator1 + ', ' + this.second+modificator2 + '...'
+          if(first>1 && first<5) modificator1 = ' спальни'
+          if(first>4) modificator1 = ' спален'
+          if(second>1 && second<5) modificator2 = ' кровати'
+          if(second>4) modificator2 = ' кроватей'
+          if(first == 0 && second == 0) return 'Выберите удобства'
+          if(first != 0 && second == 0) return first + modificator1
+          if(second != 0 && first == 0) return second + modificator2
+             return first+modificator1 + ', ' + second+modificator2 + '...'
       }
     }
+    })()
 
     function updateInputplacheholder (){
       if(attr == 'guests') {
