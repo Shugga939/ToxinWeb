@@ -6,16 +6,6 @@
 
 ***
 
-## Table of contents
-* [Getting Started](#Getting-Started)
-  * [UI Kit](#UI-Kit)
-  * [Website](#Website)
-* [Contributing](#Contributing)
-  * [Technologies](#Technologies)
-  * [Setup and Scripts](#Setup-and-Scripts)
-* [License](#License)
-
-***
 
 ## Contributing
 
